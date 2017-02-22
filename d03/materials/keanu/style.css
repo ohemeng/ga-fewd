@@ -1,0 +1,26 @@
+h1 {
+	color: green;
+	background-color: #77ff77;
+	text-align: center;
+}
+
+	img {
+	  -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+    border-radius: 40px;
+    margin: 0px 100px 0px 250px;
+	}
+
+	body {
+		   background: -webkit-linear-gradient(white, green); 
+		   
+	}
+
+	.highlight {
+		background-color: yellow;
+	}
+
+	#largerfont {
+		font-size: 20px;
+	}
