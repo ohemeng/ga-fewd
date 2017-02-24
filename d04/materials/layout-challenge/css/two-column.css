@@ -1,0 +1,65 @@
+
+	body {
+		min-width: 480px;
+}
+
+h1 {
+	margin-bottom: 50px;
+	margin-left: 7%;
+}
+
+.header, .content, .sidebar, .footer {
+	background-color: #dddddd;
+	border: 1px solid #bbbbbb;
+	margin-bottom: 2%;
+}
+
+div.header {
+	height: 200px;
+	width: 84%;
+	margin-top: ;
+	margin-right: auto;
+	margin-bottom: ;
+	margin-left: auto;
+}
+
+.main {
+	width: 84%;
+	padding: 0px;
+	border:0px;
+	margin-top: 0px;
+	margin-bottom:0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.content {
+	height: 600px;
+	width: 70%;
+	margin-top: ;
+	margin-right: 2%;
+	margin-bottom: 
+	margin-left: 0%;
+	display: inline-block;
+}
+
+div.sidebar {
+	height: 600px;
+	width: 27%;
+	margin-top: ;
+	margin-right: 0% ;
+	margin-bottom: ;
+	margin-left: 0%;
+	display: inline-block;
+	float: right;
+}
+
+div.footer {
+	height: 200px;
+	width: 84%;
+	margin-top: ;
+	margin-right: auto;
+	margin-bottom: ;
+	margin-left: auto;
+	clear:both;
+}
