@@ -1,0 +1,115 @@
+
+body {
+background: linear-gradient(to bottom, #46739A 30%, #ffffff 0%);
+font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+	margin: 0px auto;
+	width: 80%;
+}
+
+h1 {
+	font-size: 18px;
+	margin-left: 20px;
+	padding-top: 20px;
+}
+
+.content p {
+	font-size: 12px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.iphone {
+	margin-top: 60px;
+	margin-left: 30px;
+	width: 420px;
+	height:600px;
+}
+
+.right_frame{
+	display: inline-block;
+	position: relative;
+	top: -220px;
+}
+
+.content {
+border-radius: 10px;
+width: 350px;
+background-color: white;
+box-shadow: 0px 0px 3px 3px grey;
+}
+
+.bold{
+	-webkit-font-smoothing: antialiased;
+	font-weight: bolder;
+}
+
+.badge_ios {
+border-radius: 5px;
+width:120px;
+height: 40px;
+margin-left: 20px;
+margin-bottom: 20px;
+}
+
+.badge_android {
+border-radius: 5px;
+width: 120px;
+height:40px;
+margin-bottom: 20px;
+}
+
+.instagram_logo {
+	padding-top: 0px;
+	width: 220px;
+	height: 50px;
+	display: inline-block;
+
+}
+
+.login{
+	color: white;
+	display: inline-block;
+	float: right;
+	border-radius: 5px;
+	margin-top: 2px;
+	width: 60px;
+	padding-right: 15px;
+	background-color: #6D91AF;
+	box-shadow: 0px 0px 1px 1px grey;
+}
+
+.house {
+display: inline-block;
+height:35px;
+width: 25px;
+float: right;
+}
+
+.login p{
+	float: right;
+	font-size: 12px;
+}
+ul {
+	display: inline-block;
+	margin-left: 80px;
+}
+
+li {
+	font-size: 12px;
+	font-family: arial;
+	display: inline-block;
+	margin-right: 20px;
+	color: #11395D;
+}
+a {
+		text-decoration: none;
+}
+
+footer{
+	font-size: 12px;
+	color: #CFCFCF;
+	display: inline-block;
+}

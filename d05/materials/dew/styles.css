@@ -1,0 +1,109 @@
+body{
+background-color: #bbbbbb;
+}
+
+.contain{
+	width: 50%;
+	margin: auto;
+	background-color: white;
+
+}
+
+h1 {
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	text-align: right;
+}
+
+.logo_flag{
+	background-color: #990000;
+	color: white;
+	width:60px;
+	height: 15px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 5px;
+	display: inline-block;
+}
+
+.name {
+font-size: 10px;
+font-family: arial;
+display: inline-block;
+color: #bbbbbb;
+}
+
+img {
+height: 250px;
+width: 100%;
+}
+
+.contact{
+width: 50%;
+margin: auto;
+}
+
+.about {
+font-size: 10px;
+color: grey;
+width: 50%;
+margin: auto;
+}
+
+a{
+display: inline-block;
+font-size: 10px;
+color: white;
+width: 49%;
+height: 20px;
+text-align: center;
+text-decoration: none;
+padding-top: 5px;
+margin-bottom: 5px;
+}
+
+
+a[href*="#"] {
+	background-color: grey;
+	display: inline-block;
+font-size: 10px;
+color: white;
+width: 100%;
+
+}
+
+a[href*="twitter"] {
+	background-color: #33bbff;
+}
+
+a[href*="dribbble"] {
+	background-color: #ff0055;
+}
+
+ a[href*="medium"] {
+	background-color: black;
+}
+
+a[href*="instagram"] {
+	background-color: #805500;
+}
+
+a[href*="pinterest"] {
+	background-color: #e60000;
+}
+
+a[href*="rdio"] {
+	background-color: #0088cc;
+}
+
+footer {
+background-color: #222222;
+font-size: 10px;
+color: white;
+width: 100%;
+height: 30px;
+text-align: center;
+padding-top: 5px;
+margin-top: 20px;
+}
