@@ -85,6 +85,13 @@ text-align: center;
 	background-color: #ff0000;
 }
 
+.dropcap {
+	float: left;
+	font-size: 2.8em;
+	margin-top: -20px;
+	color: #dddddd;
+}
+
 .date {
  color: #cccccc;
  margin-top: 50px;
