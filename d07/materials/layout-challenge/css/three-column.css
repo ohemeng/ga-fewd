@@ -1,0 +1,26 @@
+body {
+width: 90%;
+margin: 0 auto;
+}
+
+.header, .footer{
+	background-color: grey;
+	height: 200px;
+}
+
+.leftcolumn, .rightcolumn{
+	height: 500px;
+	background-color: grey;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+.middlecolumn{
+	height: 500px;
+	background-color: grey;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	margin-right: 2%;
+	margin-left: 2%;
+	width: 46%;
+}
