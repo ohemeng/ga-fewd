@@ -1,4 +1,5 @@
 console.log("WRITE YOUR SOLUTION IN HERE!");
+/*
 x = 0;
 
 while (x < 4) {
@@ -60,3 +61,4 @@ while (x < 2) {
 	d.move();
 	x = x + 1;
 }
+*/
