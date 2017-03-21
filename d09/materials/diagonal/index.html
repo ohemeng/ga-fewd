@@ -49,8 +49,10 @@
     */
 
   </script>
- 
+
+  
   <script type="text/javascript">
+  /*
    x = 0;
    y = 0;
    mycolor = "#88F";
@@ -64,7 +66,32 @@
       y = 19-i;
       g.fill(x,y,"color " + mycolor);
     }
+    */
   </script>
-  
+    
+
+  <script type="text/javascript">
+    x=0;
+    y=0;
+    i=0;
+    mycolor = "#F00";
+    while(i < 20) {
+      x = i;
+      y = i;
+      g.fill(x,y,"color " + mycolor);
+      i++;
+    }
+    x=0;
+    y=0;
+    i=0;
+    mycolor = "#88F";
+    while(i < 20) {
+      x = i;
+      y = 19-i;
+      g.fill(x,y,"color " + mycolor);
+      i++;
+    }
+  </script>
+
 </body>
 </html>
