@@ -9,7 +9,14 @@ $("button").on("click", function(){
 	$("input").val("");
 });
 */
-
+buttonClick = false;
 $("button").on("click", function(){
-	$(".list").style.display = none;
+	if (buttonClick === false) {
+	$(".list").css("display", "none");
+	buttonClick = true;
+} else {
+	$(".list").css("display", "block");
+	buttonClick = false;
+}
+
 });
