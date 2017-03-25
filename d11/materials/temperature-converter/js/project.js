@@ -1,16 +1,33 @@
 console.log("jquery is running");
 
-/*
-$("button.convertbtn").on("click", function(){
+
+$("button#convertbtn").on("click", function(){
 	console.log("button is clicked");
-	var celcius = $("input").val();
-	var fahrenheit = parseInt(celcius) * 9 / 5 + 32;
+	console.log($("#dropdown").val());
+	var selection = $("#dropdown").val();
 
+	if (selection === "Celsius to Fahrenheit"){
+	var celsius = $("input").val();
+	var fahrenheit = parseInt(celsius * 9 / 5 + 32);
+	console.log("fahrenheit = " + fahrenheit);
+	$("span#convertunit").text("° C");
 	$("span#converted").text(fahrenheit);
-	$("input").val("");
-});
-*/
+	$("span#units").text("F");
+	}
 
+	if (selection === "Fahrenheit to Celsius") {
+	console.log(selection);
+	var fahrenheit = $("input").val();
+	var celsius = parseInt((fahrenheit - 32) * 5 / 9) ;
+	$("span#convertunit").text("° F");
+	$("span#converted").text(celsius);
+	$("span#units").text("C");
+	}
+	
+
+});
+
+/*
 var isClicked = false;
 
 $("button#dropbtn").on("click", function(){
@@ -43,3 +60,5 @@ $("#fahrenheit").on("click", function(){
 	$("span#convertunit").text("fahrenheit");
 	
 });
+
+*/

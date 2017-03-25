@@ -9,22 +9,19 @@
 <body>
 
   <label>
-    Temperature in  
+    Temperature:  
   </label>
 
-  <div class="dropdown">
-    <button id="dropbtn">Select C/F</button>
-    <div id="myDropdown" class="dropdown-content">
-      <div id="selection">
-        <a href="#" id="celsius">Celsius to Fahrenheit</a> <br>
-        <a href="#" id="fahrenheit">Fahrenheit to Celsius</a>
-      </div>
-    </div>
-  </div>
+        <select id="dropdown">
+          <option>Celsius to Fahrenheit</option>
+          <option>Fahrenheit to Celsius</option>
+        </select>
 
+  <br>
 
   <input type="text" id="temperature" /><span id="convertunit"></span>
-
+  <br>
+  <button id="convertbtn">Convert</button>
 
 
   <!-- <button class="convertbtn">Convert!</button> -->
