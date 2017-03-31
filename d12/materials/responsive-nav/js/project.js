@@ -6,8 +6,5 @@ function myFunction(x) {
 
 $(".container").on("click", function(){
 	console.log("container was clicked");
-//	$(".mobileMenu").css("display", "block");
-//	$(".mobileMenu").css("height", "40px");
-
 	$(".mobileMenu").toggleClass("showMobileMenu");
 })
