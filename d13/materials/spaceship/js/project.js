@@ -18,6 +18,10 @@ console.log("y pos: " + shipYPosition);
 var crushSound = new Audio("wav/playerHit.wav");
 var glassSound = new Audio("wav/glass.wav");
 var spinSound = new Audio("wav/gameStart.wav");
+var hitSound = new Audio("wav/enemyHit.wav");
+
+var redHit = 0;
+var greenHit = 0;
 
 $(document).on('keydown', function (e) {
     console.log(e.which);  //or alert(e.which);
@@ -34,7 +38,7 @@ $(document).on('keydown', function (e) {
 		console.log("x pos: " + shipXPosition);
 		console.log("y pos: " + shipYPosition);
 
-  if (shipXPosition <= (windowWidth - 100) && shipXPosition >= 8 && (shipYPosition <= (windowHeight - 100) && shipYPosition >= 8)){
+  if (shipXPosition <= (windowWidth - 200) && shipXPosition >= 8 && (shipYPosition <= (windowHeight - 100) && shipYPosition >= 8)){
 
    if(e.which === 39){
    	/* $(".spaceship").css("transition", "left 1s"); */
@@ -68,7 +72,7 @@ $(document).on('keydown', function (e) {
 
 // W to rotate 180 degrees
    if(e.which === 87){
-   	$(".spaceship").css("transform", "rotate(180deg)");
+   	$(".spaceship").css("transform", "rotate(360deg)");
    }
 
 // Q to rotate 0 degrees
@@ -100,7 +104,7 @@ $(document).on('keydown', function (e) {
 		console.log("x pos: " + shipXPosition);
 		console.log("y pos: " + shipYPosition);
 
- 	} else if (shipXPosition > (windowWidth - 100)){
+ 	} else if (shipXPosition > (windowWidth - 200)){
  		crushSound.play();
  		$(".spaceship").css("background", "radial-gradient(red,yellow)");
  		$(".spaceship").css("box-shadow", "10px 10px 70px yellow");
@@ -132,6 +136,23 @@ $(document).on('keydown', function (e) {
  		$(".spaceship").css("background", "rgba(0,0,0,0)");
  		count = count + 1;
 		$("#count").text(count);
+ 	}
+
+ 		/* Vanishing boxes */
+ 		if(shipXPosition > 400 && shipXPosition < 500 && shipYPosition > 125 && shipYPosition < 275){
+ 			if(redHit === 0){
+ 			hitSound.play();
+ 			$(".redBox").fadeOut();
+ 			redHit++;
+ 		}
+ 	}
+
+ 		if(shipXPosition > 100 && shipXPosition < 200 && shipYPosition > 350 && shipYPosition < 550){
+ 			if(greenHit === 0){
+ 			hitSound.play();
+ 			$(".greenBox").fadeOut();
+ 			greenHit++;
+ 		}
  	}
 
 	});

@@ -24,3 +24,23 @@ body{
    80% {left: -100px; background: yellow;}
    100% {left: -30px;}
 }
+
+.redBox {
+	height: 100px;
+	width: 100px;
+	background: url("../img/redsat.png");
+	background-size: cover;
+	position: relative;
+	top: 100px;
+	left: 600px;
+}
+
+.greenBox{
+	height: 100px;
+	width: 100px;
+	background: url("../img/greensat.png");
+	background-size: cover;
+	position: relative;
+	top: 300px;
+	left: 300px;
+}
