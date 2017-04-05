@@ -1,0 +1,97 @@
+.logoCircle{
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	background-color: white;
+	border-radius: 100%;
+	margin-left: 1%;
+	margin-top: 0.25%;
+}
+
+.logo{
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.mainPic{
+	height: 300px;
+	width: 100%;
+	background-image: url("../img/pizza1.jpeg");
+	background-size: cover;
+}
+
+.deal1, .deal2, .deal3{
+	height: 200px;
+	width: 100%;
+}
+
+.deal1{
+	background-image: url("../img/deals_hand.jpeg");
+	background-size: cover;
+}
+
+.deal2{
+	background-image: url("../img/wings.jpeg");
+	background-size: cover;
+}
+
+.deal3{
+	background-image: url("../img/deals_tasty.jpeg");
+	background-size: cover;
+}
+img .size200x200{
+	height: 200px;
+	width:200px;
+}
+
+h3{
+	text-decoration: underline;
+}
+
+.modal{
+	display: none;
+	height: 200px;
+	width: 400px;
+	border-radius: 10px;
+	border: 1px solid black;
+	background-color: white;
+	z-index: 1;
+	margin: 0 auto;
+}
+
+.innerform{
+	height: 180px;
+	width: 350px;
+	margin: 0 auto;
+}
+.myname, .mypassword{
+	height: 30px;
+	width: 300px;
+	margin: 5px 10px 5px 10px;
+}
+input {
+	border: 1px solid lightgrey;
+}
+
+button {
+	
+}
+
+.btn1{
+	height: 30px;
+	width: 70px;
+	background-color: #21BA45;
+	color: white;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.btn2{
+	height: 30px;
+	width: 70px;
+	margin-top: 10px;
+	background-color: #1B1C1D;
+	color: white;
+}
