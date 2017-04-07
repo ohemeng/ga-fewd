@@ -1,3 +1,6 @@
+console.log("jQuery has started");
+
+
  $(".button-collapse").sideNav();
 
    $('.button-collapse').sideNav({
@@ -8,22 +11,6 @@
     }
   );
 
-   console.log("jQuery has started");
-
-// Click sign-in to pop-up modal
-$(".signIn").on("click", function(){
-	$("body").css("background-color", "rgba(0,0,0,0.65)");
-	$(".modal").fadeIn();
-	//$(".modal").css("display", "block");
-	console.log("clicked sign In");
-});
-
-// Click cancel to dismiss modal
-	$(".btn2").on("click", function(){
-		$(".modal").fadeOut();
-		//$(".modal").css("display", "none");
-		$("body").css("background-color", "rgba(255,255,255,1)");
-	});
 
 // Start Owl-Carousel
 
@@ -51,33 +38,136 @@ $('.owl-carousel').owlCarousel({
 // End Owl-Carousel
 
 // Start Order Carousel (bootstrap)
+
 $('.carousel').carousel({
   interval: 2000
 });
 
 // End Order Carousel (bootstrap)
 
-// Start of buttons
-$(".moveForward").on("click", function(){
+// --------- Start of Size Selection --------------------------
+
+$(".plate").css("left", "+=200");
+$(".pizza").css("display", "none");
+
+$("#large").on("click", function(){
+	$(".pizza").css("display", "inline-block");
+	$(".pizza").addClass("addPizza");
+	})
+
+$(".confirmSize").on("click", function(){
 	console.log("mover clicked");
-	$("#pizza").css("left", "+=200px");
-
 	if ($("#large").is(":checked")){
-	console.log("large was checked");
+		console.log("large was checked");
 	}
-
-	if ($("#pepperoni").is(":checked")){
-	console.log("Pepperoni was selected");
-	$("#pizza").css("background", "img/order/cheese_1.png");
-	$("#pizza").css("z-index", "1");
-	$("#pizza").attr("src", "img/order/topping_pepperoni.png");
-	}
+	$(".plate, .addPizza").css("left", "+=250px");
+	$(".confirmSize").attr("disabled", "true");
+	$("#large").attr("disabled", "true");
+	$("#meduim").attr("disabled", "true");
+	$("#small").attr("disabled", "true");
 });
 
+// --------------- Start of Meat Selection -----------------------------------
+
+$("#pepperoni").on("click", function(){
+	if($("#pepperoni").is(":checked")){
+		console.log("pepperoni was checked");
+		$(".pepperoni").addClass("addPepperoni");
+		} else {
+		$(".pepperoni").removeClass("addPepperoni");
+		}
+	})
+
+	$("#chicken").on("click", function(){
+	if($("#chicken").is(":checked")){
+		$(".chicken").addClass("addChicken");
+		} else {
+		$(".chicken").removeClass("addChicken");
+		}
+	})
+
+	$("#italianSausage").on("click", function(){
+	if($("#italianSausage").is(":checked")){
+		$(".italianSausage").addClass("addItalianSausage");
+		} else {
+		$(".italianSausage").removeClass("addItalianSausage");
+		}
+	})
+
+	$("#meatballs").on("click", function(){
+	if($("#meatballs").is(":checked")){
+		$(".meatballs").addClass("addMeatballs");
+		} else {
+		$(".meatballs").removeClass("addMeatballs");
+		}
+	})
+
+	$(".confirmMeat").on("click", function(){
+		console.log("confirmMeat clicked");
+		$(".plate, .addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "+=225px");
+		$(".confirmMeat").attr("disabled", "true");
+		$("#pepperoni").attr("disabled", "true");
+		$("#chicken").attr("disabled", "true");
+		$("#meatballs").attr("disabled", "true");
+		$("#italianSausage").attr("disabled", "true");
+	});
+
+// ---------------- Start of Vegetable Selection--------
+	
+	$("#pepper").on("click", function(){
+		if($("#pepper").is(":checked")){
+			$(".pepper").addClass("addPepper");
+			} else {
+			$(".pepper").removeClass("addPepper");
+			}
+		})
+
+		$("#olives").on("click", function(){
+		if($("#olives").is(":checked")){
+			$(".olives").addClass("addOlives");
+			} else {
+			$(".olives").removeClass("addOlives");
+			}
+		})
+
+	$("#spinach").on("click", function(){
+		if($("#spinach").is(":checked")){
+			console.log("spinach was checked");
+			$(".spinach").addClass("addSpinach");
+			} else {
+			$(".spinach").removeClass("addSpinach");
+			}
+		})
+
+	$("#pineapple").on("click", function(){
+		if($("#pineapple").is(":checked")){
+			$(".pineapple").addClass("addPineapple");
+			} else {
+			$(".pineapple").removeClass("addPineapple");
+			}
+		})
+
+
+	$(".confirmVeggies").on("click", function(){
+		console.log("confirmVeggies clicked");
+		$(".plate, .addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs, .addPineapple, .addPepper, .addOlives").css("left", "+=225px");
+		$(".confirmVeggies").attr("disabled", "true");
+		$("#pepper").attr("disabled", "true");
+		$("#pineapple").attr("disabled", "true");
+		$("#spinach").attr("disabled", "true");
+		$("#olives").attr("disabled", "true");
+	
+	});
+
+
+
+
+/*
 $(".moveBackward").on("click", function(){
 	console.log("mover clicked");
 	$("#pizza").css("left", "-=200px");
 });
+*/
 
 // End of buttons
 

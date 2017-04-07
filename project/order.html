@@ -44,8 +44,8 @@
 		
 
 		  <ul id="nav-mobile" class="right hide-on-med-and-down lgNav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="#">Order</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="#">Order</a></li>
         <li><a href="typesofpizza.html">Types of Pizza</a></li>
         <li><a href="#">Location</a></li>
         <li><a href="#">Sign-In</a></li>
@@ -54,8 +54,8 @@
        
 
 			<ul class="side-nav" id="mobile-demo">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="#">Order</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="#">Order</a></li>
         <li><a href="typesofpizza.html">Types of Pizza</a></li>
         <li><a href="#">Locations</a></li>
         <li><a href="#">Sign-In</a></li>
@@ -74,7 +74,8 @@
 <!-- Start of Content -->
 
 <!-- Start of selection -->
-<form action="">
+<!-- <form action="#"> -->
+
 <div class="row" id="selection">
   <div class="col s12">
     <div class="col s12 m4 size" id="size">
@@ -85,56 +86,51 @@
       <label for="medium">Medium</label><br>
       <input type="radio" name="size" value="small" id="small" class="with-gap"> 
       <label for="small">Small</label><br>
+      <button class="confirmSize">Confirm</button>
     </div>
 
     <div class="col s12 m4 meat">
+      <p>Select Meat:</p>
       <input type="checkbox" name="pepperoni" value="pepperoni" id="pepperoni" class="filled-in"><label for="pepperoni">Pepperoni</label><br>
       <input type="checkbox" name="chicken" value="chicken" id="chicken" class="filled-in"><label for="chicken">Chicken</label><br>
-     <input type="checkbox" name="italiansausage" value="italiansausage" id="italiansausage" class="filled-in"><label for="italiansausage">Italian Sausage</label><br>
-      <input type="checkbox" name="meatball" value="meatball" id="meatball" class="filled-in"><label for="meatball">Meatball</label><br>
+     <input type="checkbox" name="italianSausage" value="italianSausage" id="italianSausage" class="filled-in"><label for="italianSausage">Italian Sausage</label><br>
+      <input type="checkbox" name="meatballs" value="meatballs" id="meatballs" class="filled-in"><label for="meatballs">Meatballs</label><br>
+       <button class="confirmMeat">Confirm</button>
     </div>
 
     <div class="col s12 m4 vegetables"> 
+      <p>Select Vegetables:</p>
       <input type="checkbox" name="pepper" value="pepper" id="pepper" class="filled-in"><label for="pepper">Pepper</label><br>
       <input type="checkbox" name="olives" value="olives" id="olives" class="filled-in"><label for="olives">Olives</label><br>
      <input type="checkbox" name="pineapple" value="pineapple" id="pineapple" class="filled-in"><label for="pineapple">Pineapple</label><br>
       <input type="checkbox" name="spinach" value="spinach" id="spinach" class="filled-in"><label for="spinach">Spinach</label><br>
+      <button class="confirmVeggies">Confirm</button>
     </div>
 
   </div>
 </div>
-</form>
-<!-- End of selection -->
 
-<!-- Start of Order Carousel -->
-<!--
-    <div class="owl-carousel owl-theme" id="order-carousel">
-      <img src="img/order/cheese_1.png">
-      <img src="img/order/">
-      <img src="img/order/">
-    </div>
--->
-<!-- End of Carousel -->
+<!-- </form> -->
+<!-- End of selection -->
 
 <!-- start new carousel -->
 <div class="row">
   <div class="new-carousel">
 
-    <div class="col s12 m4">
-      <div class="location1">
-        <img id="pizza" src="img/order/cheese_1.png">
-      </div>
-    </div>
-    <div class="col s12 m4">
-      <div class="locstion2">
-      </div>
-    </div>
     <div class="col s12">
-      <div class="locstion3">
-      </div>
+      <div class="plate"></div>
+      <div class="pizza"></div>
+      <div class="pepperoni"></div>
+      <div class="chicken"></div>
+      <div class="italianSausage"></div>
+      <div class="meatballs"></div>
+      <div class="pepper"></div>
+      <div class="olives"></div>
+      <div class="spinach"></div>
+      <div class="pineapple"></div>
+
     </div>
-  </div>
-</div>
+    
 
 <!-- Start of Move Buttons -->
 <div class="row">
@@ -162,11 +158,11 @@
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links:</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Order</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Types of PIzza</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Sign In</a></li>
-             <li><a class="white-text href="mailto:no-one@snai1mai1.com?subject=Frank's Pizza">Contact Us</a></li>
+            <li><a class="grey-text text-lighten-3" href="#">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="#">Order</a></li>
+            <li><a class="grey-text text-lighten-3" href="#">Types of PIzza</a></li>
+            <li><a class="grey-text text-lighten-3" href="#">Sign In</a></li>
+             <li><a class="white-text href="mailto:no-one@snai1mai1.com?subject='Frank's Pizza'">Contact Us</a></li>
           </ul>
         </div>
       </div>

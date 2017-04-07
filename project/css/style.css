@@ -54,10 +54,118 @@ h3{
 	border-right: 1px solid black;
 }
 
-#order-carousel{
-	height:300px;
+.plate{
+	height: 230px;
+	width: 230px;
+	border-radius: 100%;
+	background-color: red;
+	position: relative;
+	left:-200px;
+	transition: left 2s;
 }
 
-#pizza{
-	position: relative;
+.addPizza{
+	height: 200px;
+	width: 200px;
+	background: url("../img/order/cheese_1.png");
+	background-size: contain;
+	position: absolute;
+	top: +250px;
+	left: +60px;
+	transition: left 2s;
+}
+
+.addPepperoni{
+	height: 200px;
+	width: 200px;
+	background: url("../img/order/topping_pepperoni.png");
+	background-size: contain;
+	position: absolute;
+	display: inline-block;
+	top: +250px;
+	left: +310px;
+	transition: left 2s;
+}
+
+.addChicken{
+	height: 200px;
+	width: 200px;
+	background: url("../img/order/topping_chicken.png");
+	background-size: contain;
+	position: absolute;
+	display: inline-block;
+	top: +250px;
+	left: +310px;
+	transition: left 2s;
+}
+
+.addItalianSausage{
+	height: 200px;
+	width: 200px;
+	background: url("../img/order/topping_italiansausage.png");
+	background-size: contain;
+	position: absolute;
+	display: inline-block;
+	top: +250px;
+	left: +310px;
+	transition: left 2s;
+}
+
+.addMeatballs{
+	height: 200px;
+	width: 200px;
+	background: url("../img/order/topping_meatball.png");
+	background-size: contain;
+	position: absolute;
+	display: inline-block;
+	top: +250px;
+	left: +310px;
+	transition: left 2s;
+}
+
+.addPepper{
+	height: 200px;
+	width: 200px;
+	background: url("../img/order/topping_pepper.png");
+	background-size: contain;
+	position: absolute;
+	display: inline-block;
+	top: +250px;
+	left: +540px;
+	transition: left 2s;
+}
+
+.addOlives{
+	height: 200px;
+	width: 200px;
+	background: url("../img/order/topping_olives.png");
+	background-size: contain;
+	position: absolute;
+	display: inline-block;
+	top: +250px;
+	left: +540px;
+	transition: left 2s;
+
+.addSpinach{
+	height: 200px;
+	width: 200px;
+	background: url("../img/order/topping_spinach.png");
+	background-size: contain;
+	position: absolute;
+	display: inline-block;
+	top: +250px;
+	left: +540px;
+	transition: left 2s;
+}
+
+.addPineapple{
+	height: 200px;
+	width: 200px;
+	background: url("../img/order/topping_pineapple.png");
+	background-size: contain;
+	position: absolute;
+	display: inline-block;
+	top: +250px;
+	left: +540px;
+	transition: left 2s;
 }
