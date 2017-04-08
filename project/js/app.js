@@ -49,6 +49,18 @@ $('.carousel').carousel({
 
 $(".plate").css("left", "10%");
 $(".pizza").css("display", "none");
+$(".confirmMeat").attr("disabled", true);
+$("#pepperoni").attr("disabled", true);
+$("#chicken").attr("disabled", true);
+$("#meatballs").attr("disabled", true);
+$("#italianSausage").attr("disabled", true);
+
+$(".confirmVeggies").attr("disabled", true);
+$("#pepper").attr("disabled", true);
+$("#pineapple").attr("disabled", true);
+$("#spinach").attr("disabled", true);
+$("#olives").attr("disabled", true);
+
 
 $("#large").on("click", function(){
 	$(".pizza").css("display", "inline-block");
@@ -57,13 +69,21 @@ $("#large").on("click", function(){
 
 $(".confirmSize").on("click", function(){
 	if ($("#large").is(":checked")){
+	console.log("large was selected");
 	}
 	$(".plate").css("left", "40%");
 	$(".addPizza").css("left", "41%");
-	$(".confirmSize").attr("disabled", "true");
-	$("#large").attr("disabled", "true");
-	$("#meduim").attr("disabled", "true");
-	$("#small").attr("disabled", "true");
+	$(".confirmSize").attr("disabled", true);
+	$("#large").attr("disabled", true);
+	$("#meduim").attr("disabled", true);
+	$("#small").attr("disabled", true);
+
+	$(".confirmMeat").attr("disabled", false);
+	$("#pepperoni").attr("disabled", false);
+	$("#chicken").attr("disabled", false);
+	$("#meatballs").attr("disabled", false);
+	$("#italianSausage").attr("disabled", false);
+
 });
 
 // --------------- Start of Meat Selection -----------------------------------
@@ -105,11 +125,17 @@ $("#pepperoni").on("click", function(){
 		console.log("confirmMeat clicked");
 		$(".plate").css("left", "75%");
 		$(".addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "72%");
-		$(".confirmMeat").attr("disabled", "true");
-		$("#pepperoni").attr("disabled", "true");
-		$("#chicken").attr("disabled", "true");
-		$("#meatballs").attr("disabled", "true");
-		$("#italianSausage").attr("disabled", "true");
+		$(".confirmMeat").attr("disabled", true);
+		$("#pepperoni").attr("disabled", true);
+		$("#chicken").attr("disabled", true);
+		$("#meatballs").attr("disabled", true);
+		$("#italianSausage").attr("disabled", true);
+
+		$(".confirmVeggies").attr("disabled", false);
+		$("#pepper").attr("disabled", false);
+		$("#pineapple").attr("disabled", false);
+		$("#spinach").attr("disabled", false);
+		$("#olives").attr("disabled", false);
 	});
 
 // ---------------- Start of Vegetable Selection--------
@@ -151,15 +177,27 @@ $("#pepperoni").on("click", function(){
 	$(".confirmVeggies").on("click", function(){
 		console.log("confirmVeggies clicked");
 		$(".plate, .addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs, .addPineapple, .addPepper, .addOlives, .addSpinach").css("left", "+=225px");
-		$(".confirmVeggies").attr("disabled", "true");
-		$("#pepper").attr("disabled", "true");
-		$("#pineapple").attr("disabled", "true");
-		$("#spinach").attr("disabled", "true");
-		$("#olives").attr("disabled", "true");
+		$(".confirmVeggies").attr("disabled", true);
+		$("#pepper").attr("disabled", true);
+		$("#pineapple").attr("disabled", true);
+		$("#spinach").attr("disabled", true);
+		$("#olives").attr("disabled", true);
 	
 	});
 
-
+var prices = {
+	large: 13.99,
+	medium: 11.99,
+	small: 9.99,
+	pepperoni: 1.99,
+	chicken: 1.99,
+	italianSausage: 1.99,
+	meatballs: 1.99,
+	pepper: 0.99,
+	olives: 0.99,
+	pineapple: 0.99,
+	spinach: 0.99
+}
 
 
 /*
