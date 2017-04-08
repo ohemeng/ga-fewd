@@ -47,7 +47,7 @@ $('.carousel').carousel({
 
 // --------- Start of Size Selection --------------------------
 
-$(".plate").css("left", "+=200");
+$(".plate").css("left", "10%");
 $(".pizza").css("display", "none");
 
 $("#large").on("click", function(){
@@ -56,11 +56,10 @@ $("#large").on("click", function(){
 	})
 
 $(".confirmSize").on("click", function(){
-	console.log("mover clicked");
 	if ($("#large").is(":checked")){
-		console.log("large was checked");
 	}
-	$(".plate, .addPizza").css("left", "+=250px");
+	$(".plate").css("left", "40%");
+	$(".addPizza").css("left", "41%");
 	$(".confirmSize").attr("disabled", "true");
 	$("#large").attr("disabled", "true");
 	$("#meduim").attr("disabled", "true");
@@ -104,7 +103,8 @@ $("#pepperoni").on("click", function(){
 
 	$(".confirmMeat").on("click", function(){
 		console.log("confirmMeat clicked");
-		$(".plate, .addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "+=225px");
+		$(".plate").css("left", "75%");
+		$(".addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "72%");
 		$(".confirmMeat").attr("disabled", "true");
 		$("#pepperoni").attr("disabled", "true");
 		$("#chicken").attr("disabled", "true");
@@ -150,7 +150,7 @@ $("#pepperoni").on("click", function(){
 
 	$(".confirmVeggies").on("click", function(){
 		console.log("confirmVeggies clicked");
-		$(".plate, .addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs, .addPineapple, .addPepper, .addOlives").css("left", "+=225px");
+		$(".plate, .addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs, .addPineapple, .addPepper, .addOlives, .addSpinach").css("left", "+=225px");
 		$(".confirmVeggies").attr("disabled", "true");
 		$("#pepper").attr("disabled", "true");
 		$("#pineapple").attr("disabled", "true");

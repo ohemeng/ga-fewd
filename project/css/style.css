@@ -55,10 +55,11 @@ h3{
 }
 
 .plate{
-	height: 230px;
-	width: 230px;
-	border-radius: 100%;
-	background-color: red;
+	height: 260px;
+	width: 260px;
+	background: url(../img/order/paperplate.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 	position: relative;
 	left:-200px;
 	transition: left 2s;
@@ -70,8 +71,8 @@ h3{
 	background: url("../img/order/cheese_1.png");
 	background-size: contain;
 	position: absolute;
-	top: +250px;
-	left: +60px;
+	top: +280px;
+	left: 15%;
 	transition: left 2s;
 }
 
@@ -82,8 +83,8 @@ h3{
 	background-size: contain;
 	position: absolute;
 	display: inline-block;
-	top: +250px;
-	left: +310px;
+	top: +280px;
+	left: 41%;
 	transition: left 2s;
 }
 
@@ -94,8 +95,8 @@ h3{
 	background-size: contain;
 	position: absolute;
 	display: inline-block;
-	top: +250px;
-	left: +310px;
+	top: +280px;
+	left: 41%;
 	transition: left 2s;
 }
 
@@ -106,8 +107,8 @@ h3{
 	background-size: contain;
 	position: absolute;
 	display: inline-block;
-	top: +250px;
-	left: +310px;
+	top: +280px;
+	left: 41%;
 	transition: left 2s;
 }
 
@@ -118,8 +119,8 @@ h3{
 	background-size: contain;
 	position: absolute;
 	display: inline-block;
-	top: +250px;
-	left: +310px;
+	top: +280px;
+	left: 41%;
 	transition: left 2s;
 }
 
@@ -130,8 +131,8 @@ h3{
 	background-size: contain;
 	position: absolute;
 	display: inline-block;
-	top: +250px;
-	left: +540px;
+	top: +280px;
+	left: 72%;
 	transition: left 2s;
 }
 
@@ -142,9 +143,10 @@ h3{
 	background-size: contain;
 	position: absolute;
 	display: inline-block;
-	top: +250px;
-	left: +540px;
+	top: +280px;
+	left: 72%;
 	transition: left 2s;
+}
 
 .addSpinach{
 	height: 200px;
@@ -153,8 +155,8 @@ h3{
 	background-size: contain;
 	position: absolute;
 	display: inline-block;
-	top: +250px;
-	left: +540px;
+	top: +280px;
+	left: 72%;
 	transition: left 2s;
 }
 
@@ -165,7 +167,7 @@ h3{
 	background-size: contain;
 	position: absolute;
 	display: inline-block;
-	top: +250px;
-	left: +540px;
+	top: +280px;
+	left: 72%;
 	transition: left 2s;
 }
