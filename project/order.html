@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-    <!-- Import bootstrap.css -->
+    <!-- Import bootstrap.css 
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+    -->
 
     <!-- my css styling -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -41,14 +42,13 @@
 		</a>
 
 		<a class="title brand-logo">Frank's Pizza TakeOut</a>
-		
 
 		  <ul id="nav-mobile" class="right hide-on-med-and-down lgNav">
         <li><a href="index.html">Home</a></li>
         <li class="active"><a href="#">Order</a></li>
         <li><a href="typesofpizza.html">Types of Pizza</a></li>
         <li><a href="#">Location</a></li>
-        <li><a href="#">Sign-In</a></li>
+        <li><a href="#modal2" id="modal2" class="signin">Sign-In</a></li>
       </ul>
 
        
@@ -58,7 +58,7 @@
         <li class="active"><a href="#">Order</a></li>
         <li><a href="typesofpizza.html">Types of Pizza</a></li>
         <li><a href="#">Locations</a></li>
-        <li><a href="#">Sign-In</a></li>
+        <li><a href="#modal2" id="modal2" class="signin">Sign-In</a></li>
       </ul>
 
       <a href="#" data-activates="mobile-demo" class="right button-collapse"><i class="material-icons">menu</i></a>
@@ -86,11 +86,13 @@
       <label for="medium">Medium</label><span>    - 11.99</span><br>
       <input type="radio" name="size" value="small" id="small" class="with-gap"> 
       <label for="small">Small</label><span>    - 9.99</span><br>
+       <input type="radio" name="size" value="other" class="other" class="with-gap"> 
+       <label class="other">Other</label><br>
       <button class="confirmSize">Confirm</button>
     </div>
 
     <div class="col s12 m4 meat">
-      <p>Select Meat:</p>
+      <p>Select Meat Toppings:</p>
       <input type="checkbox" name="pepperoni" value="pepperoni" id="pepperoni" class="filled-in"><label for="pepperoni">Pepperoni</label><span>    - 1.99</span><br>
       <input type="checkbox" name="chicken" value="chicken" id="chicken" class="filled-in"><label for="chicken">Chicken</label><span>    - 1.99</span><br>
      <input type="checkbox" name="italianSausage" value="italianSausage" id="italianSausage" class="filled-in"><label for="italianSausage">Italian Sausage</label><span>    - 1.99</span><br>
@@ -99,7 +101,7 @@
     </div>
 
     <div class="col s12 m4 vegetables"> 
-      <p>Select Vegetables:</p>
+      <p>Select Vegetable Toppings:</p>
       <input type="checkbox" name="pepper" value="pepper" id="pepper" class="filled-in"><label for="pepper">Pepper</label><span>    - 0.99</span><br>
       <input type="checkbox" name="olives" value="olives" id="olives" class="filled-in"><label for="olives">Olives</label><span>    - 0.99</span><br>
      <input type="checkbox" name="pineapple" value="pineapple" id="pineapple" class="filled-in"><label for="pineapple">Pineapple</label><span>    - 0.99</span><br>
@@ -118,7 +120,11 @@
   <div class="new-carousel">
 
     <div class="col s12">
-      <div class="plate"></div>
+
+
+
+      <div class="plate">  
+      </div>
       <div class="pizza"></div>
       <div class="pepperoni"></div>
       <div class="chicken"></div>
@@ -131,21 +137,134 @@
 
     </div>
     
+<!-- Start of Re-order button -->
+ <a class="waves-effect waves-light btn restart" href="#" id="restart">Restart</a>
 
-<!-- Start of Move Buttons -->
-<div class="row">
-  <div class="col s6">
-  <button class="moveForward">Move Forward</button>
+<!-- Start of Charges/Cost -->
+
+      <div id="costBox">
+          Cost:  $<span id="cost">0.00</span>
+      </div>
+
+<!--
+ <button data-target="modal1" class="btn">Modal</button>
+ -->
+
+<!--
+<button id="checkout" data-target="modal1">Checkout</button>
+-->
+
+  <a class="waves-effect waves-light btn mymodal" href="#modal1" id="checkout">Checkout & Pay</a>
+
+<!-- End of Charges/Cost -->
+
+<!-- Start of Checkout Modal -->
+
+  <div id="modal1" class="modal">
+  <div class="row">
+    <div class="col s4"
+    <div class="modal-content">
+      <p> Your order is here:</p>
+      <div class="orderedPizza"></div>
+      <div class="orderedMeat"></div>
+      <div class="orderedVeggies"></div>
+      <div class="total"></div>
+     </div>
+    </div>
+ 
+
+
+  <p class="white-text cyan darken-1">  Billing Information:</p>
+  <div class="row">
+    <div class="col s12 offset-s2">
+    <label>Last Name</label><input type="text" name="lastname">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 offset-s2">
+    <label>First Name</label><input type="text" name="firstname">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 offset-s2">
+    <label>Address 1</label><input type="text" name="address1">
+    </div>
   </div>
 
-  <div class="col s6">
-  <button class="moveBackward">Move Backward</button>
+  <div class="row">
+    <div class="col s12 offset-s2">
+    <label>Address 2</label><input type="text" name="address2">
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col s4 offset-s2">
+    <label>City</label><input type="text" name="city">
+    </div>
+  <div class="col s2 offset-s1">
+    <label>State</label><input type="text" name="state">
+  </div>
+  <div class="col s2 offset-s2">
+    <label>Zip Code</label><input type="text" name="zip">
   </div>
 </div>
-<!-- End of Move Buttons -->
+
+<div class="row">
+  <div class="col s6 offset-s2">
+    <label>Credit Card Number</label><input type="text" name="creditCardNumber">
+    </div>
+  <div class="col s2 offset-s1">
+    <label>CVV</label><input type="text" name="state">
+  </div>
+</div>
+
+    <div class="modal-footer">
+      <a class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+      <a class="modal-action modal-close waves-effect waves-green btn-flat pay modalDone" href ="#modalDone">Pay</a>
+    </div>
+
+  </div>
+
+
+<!-- End of Checkout Modal -->
+
+<!-- Start of Final Payment Confirmation -->
+
+  <div id="modalDone" class="modal">
+  <div class="row">
+    <div class="col s4 offset-s2"
+    <div class="modal-content">
+      <p> Thank You!</p>
+      <div> Your credit card has been charged:</div>
+      <div class="total"></div>
+     </div>
+    </div>
+
+
+    <div class="modal-footer">
+      <a class="modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+    </div>
+
+  </div>
+
 <!-- End of Content -->
 
+<!--  Start of Sign-In Modal-->
 
+  <div id="modal2" class="modal">
+
+    <div class="modal-content">
+      <p> Please Sign-In:</p>
+      <label>Email\Username:</label><input type="text"><br>
+      <label>Password:</label><input type="password">
+    </div>
+
+    <div class="modal-footer">
+      <a class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+      <a class="modal-action modal-close waves-effect waves-green btn-flat signin">Log-In</a>
+    </div>
+
+  </div>
 
 <!-- Start of Footer -->	
   <footer class="page-footer red darken-3">
@@ -153,7 +272,7 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">About Us</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          <p class="grey-text text-lighten-4">Our focus is your convenience – order online from your laptop, desktop, or smartphone 24 hours a day, 7 days a week. Our fast shipping, low prices, and outstanding customer service make WebstaurantStore the best choice to meet all of your professional and food service supply needs.</p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links:</h5>
@@ -182,7 +301,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+<!--    <script src="bootstrap/js/bootstrap.min.js"></script> -->
     <script src="js/app.js"></script>
 <!-- End of Scripts -->
 
