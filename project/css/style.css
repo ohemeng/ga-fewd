@@ -93,13 +93,23 @@ h3{
 	visibility: hidden;
 }
 
+.placeholder{
+	height: 260px;
+	width: 250px;
+	position: relative;
+	top: 22%;
+	left:0%;
+	transition: left 2s;
+}
+
 .plate{
 	height: 260px;
-	width: 260px;
+	width: 250px;
 	background: url(../img/order/paperplate.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	position: relative;
+	position: absolute;
+	top: +250px;
 	left:-200px;
 	transition: left 2s;
 }
@@ -111,103 +121,64 @@ h3{
 	background-size: contain;
 	position: absolute;
 	top: +280px;
-	left: 15%;
+	/* left: 10%; */
 	transition: left 2s;
 }
 
+
+
 .addPepperoni{
-	height: 200px;
-	width: 200px;
 	background: url("../img/order/topping_pepperoni.png");
-	background-size: contain;
-	position: absolute;
-	display: inline-block;
-	top: +280px;
-	left: 41%;
-	transition: left 2s;
 }
 
 .addChicken{
-	height: 200px;
-	width: 200px;
 	background: url("../img/order/topping_chicken.png");
-	background-size: contain;
-	position: absolute;
-	display: inline-block;
-	top: +280px;
-	left: 41%;
-	transition: left 2s;
 }
 
 .addItalianSausage{
-	height: 200px;
-	width: 200px;
 	background: url("../img/order/topping_italiansausage.png");
-	background-size: contain;
-	position: absolute;
-	display: inline-block;
-	top: +280px;
-	left: 41%;
-	transition: left 2s;
 }
 
 .addMeatballs{
+	background: url("../img/order/topping_meatball.png");
+}
+
+.addPepperoni, .addChicken, .addItalianSausage, .addMeatballs{
 	height: 200px;
 	width: 200px;
-	background: url("../img/order/topping_meatball.png");
 	background-size: contain;
 	position: absolute;
-	display: inline-block;
+/*	display: inline-block; */
 	top: +280px;
-	left: 41%;
+/*	left: 42.5%; */
 	transition: left 2s;
 }
 
 .addPepper{
-	height: 200px;
-	width: 200px;
 	background: url("../img/order/topping_pepper.png");
-	background-size: contain;
-	position: absolute;
-	display: inline-block;
-	top: +280px;
-	left: 72%;
-	transition: left 2s;
+
 }
 
 .addOlives{
-	height: 200px;
-	width: 200px;
 	background: url("../img/order/topping_olives.png");
-	background-size: contain;
-	position: absolute;
-	display: inline-block;
-	top: +280px;
-	left: 72%;
-	transition: left 2s;
 }
 
 .addSpinach{
-	height: 200px;
-	width: 200px;
 	background: url("../img/order/topping_spinach.png");
-	background-size: contain;
-	position: absolute;
-	display: inline-block;
-	top: +280px;
-	left: 72%;
-	transition: left 2s;
 }
 
 .addPineapple{
+	background: url("../img/order/topping_pineapple.png");
+}
+
+.addPepper, .addOlives, .addSpinach, .addPineapple{
 	height: 200px;
 	width: 200px;
-	background: url("../img/order/topping_pineapple.png");
 	background-size: contain;
 	position: absolute;
 	display: inline-block;
 	top: +280px;
-	left: 72%;
+/*	left: 66.5%; */
 	transition: left 2s;
 }
 

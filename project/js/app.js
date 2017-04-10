@@ -37,6 +37,7 @@ $('.owl-carousel').owlCarousel({
 
 // End Owl-Carousel
 
+
 // Start Order Carousel (bootstrap)
 
 $('.carousel').carousel({
@@ -68,8 +69,29 @@ if(cost === 0){
 	$("#checkout").css("display", "inline-block");
 }
 
+var windowWidth = window.innerWidth;
+console.log("Width: " + windowWidth);
+
+var movePlate = windowWidth * 0.014;
+var movePizza = windowWidth * 0.015;
+
+var getPlateXPosition = function(){
+	var platePosition = $(".plate").position();
+	var pizzaPosition = $(".pizza").position();
+
+	var plateXPosition = platePosition.left;
+	var pizzaXPosition = pizzaPosition.left;
+
+	console.log("plate Xpos: " + plateXPosition);
+	console.log("pizza Xpos: " + plateXPosition);
+}
+
 $(".confirmSize").attr("disabled", true);
-$(".plate").css("left", "10%");
+$(".plate").css("left", "+=" + movePlate * 24 + "px");
+$(".pizza").css("left", movePizza + "%");
+$(".pepperoni, .chicken, .italianSausage, .meatballs, .pepper, .olives, .spinach, .pineapple").css("left", movePizza + "%");
+// $(".addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", movePizza + "px");
+
 $(".pizza").css("display", "none");
 $(".confirmMeat").attr("disabled", true);
 $("#pepperoni").attr("disabled", true);
@@ -83,6 +105,7 @@ $("#pineapple").attr("disabled", true);
 $("#spinach").attr("disabled", true);
 $("#olives").attr("disabled", true);
 
+// ----------Start of Pizza Selection ------------- //
 
 $("#large").on("click", function(){
 		$(".pizza").css("display", "inline-block");
@@ -115,8 +138,10 @@ $(".confirmSize").on("click", function(){
 	if ($("#large").is(":checked")){
 	console.log("large was selected");
 	}
-	$(".plate").css("left", "40%");
-	$(".addPizza").css("left", "41%");
+	$(".plate").css("left", "+=" + movePlate * 17 + "px");
+	$(".addPizza").css("left", "+=" + movePlate * 17 + "px");
+	$(".pepperoni, .chicken, .italianSausage, .meatballs").css("left", "+=" + movePizza + movePlate + movePlate + "px");
+//	$(".addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "+=" + movePlate * 17 + "px");
 	$(".confirmSize").attr("disabled", true);
 	$("#large").attr("disabled", true);
 	$("#medium").attr("disabled", true);
@@ -132,10 +157,11 @@ $(".confirmSize").on("click", function(){
 });
 
 // --------------- Start of Meat Selection -----------------------------------
+// $(".pepperoni, .chicken, .italianSausage, .meatballs").css("left", movePlate  31 + "px");
+//	 $(".addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "+" + movePlate * 50 + "px");
 
 $("#pepperoni").on("click", function(){
 	if($("#pepperoni").is(":checked")){
-		console.log("pepperoni was checked");
 		$(".pepperoni").addClass("addPepperoni");
 		addCost("pepperoni");
 		cashSound.play();
@@ -181,10 +207,14 @@ $("#pepperoni").on("click", function(){
 		}
 	})
 
+
+
 	$(".confirmMeat").on("click", function(){
 		console.log("confirmMeat clicked");
-		$(".plate").css("left", "75%");
-		$(".addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "72%");
+		$(".plate").css("left", "+=" + movePlate * 17 + "px");
+		getPlateXPosition();
+		$(".addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "+=" + movePlate * 17 + "px");
+		$(".pepper, .olives, .spinach, .pineapple").css("left", movePlate * 4.35 + "px");
 		$(".confirmMeat").attr("disabled", true);
 		$("#pepperoni").attr("disabled", true);
 		$("#chicken").attr("disabled", true);
@@ -249,6 +279,7 @@ $("#pepperoni").on("click", function(){
 	$(".confirmVeggies").on("click", function(){
 		console.log("confirmVeggies clicked");
 		$(".plate, .addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs, .addPineapple, .addPepper, .addOlives, .addSpinach").css("left", "+=700px");
+		getPlateXPosition();
 		$(".confirmVeggies").attr("disabled", true);
 		$("#pepper").attr("disabled", true);
 		$("#pineapple").attr("disabled", true);
@@ -293,8 +324,9 @@ $(".confirmMeat").on("click", function(){
 	console.log("confirming my order!!")
 	var meatOrder = "";
 	var numOfMeats = 0;
-	if ($("#pepperoni").is(":checked")) {
+	
 
+	if ($("#pepperoni").is(":checked")) {
 			$(".orderedMeat").append('Pepperoni: $' + prices["pepperoni"] + '<br>');
 
 			meatOrder = meatOrder + " Pepperoni";
@@ -422,6 +454,9 @@ var locations = [
     }
 
 // ---- End of Map of Locations --------------- //
+
+
+
 
 /*
 
