@@ -330,7 +330,7 @@ $(".confirmVeggies").on("click", function(){
 		//	numOfVeggies = numOfVeggies + 1;
 	}
 	if ($("#olives").is(":checked")) {
-			$(".orderedVeggies").append('Olivesi: $' + prices["olives"] + '<br>');
+			$(".orderedVeggies").append('Olives: $' + prices["olives"] + '<br>');
 			veggiesOrder = veggiesOrder + " Olives";
 		//	numOfVeggies = numOfVeggies + 1;
 	}
@@ -340,7 +340,7 @@ $(".confirmVeggies").on("click", function(){
 		//	numOfVeggies = numOfVeggies + 1;
 	}
 		if ($("#spinach").is(":checked")) {
-			$(".orderedVeggies").append('Spinachi: $' + prices["spinach"] + '<br>');
+			$(".orderedVeggies").append('Spinach: $' + prices["spinach"] + '<br>');
 			veggiesOrder = veggiesOrder + " Spinach";
 		//	numOfVeggies = numOfVeggies + 1;
 	}
@@ -387,6 +387,41 @@ $(".modalDone").on("click", function(){
     });
  });
 
+
+// --- Start of Map of Locations ----- //
+var locations = [
+      ['Queens, NY', 40.7282, -73.7949, 4],
+      ['Woodbridge, NJ', 40.5576, -74.2846, 5],
+      ['Newark, NJ', 40.7357, -74.1724, 3],
+      ['Brooklyn NY', 40.6782, -73.9442, 2],
+      ['New York City', 40.7128, -74.0059, 1]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(40.7128, -74.0059),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+
+// ---- End of Map of Locations --------------- //
 
 /*
 
