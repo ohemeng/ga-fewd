@@ -1,5 +1,11 @@
 console.log("jQuery has started");
 
+// var addPepperoniXpos = window.innerWidth / 1088 * 43;
+
+// console.log("Here is " + addPepperoniXpos);
+
+//	$(".addPepperoni").css("left", addPepperoniXpos + "%");
+
 
  $(".button-collapse").sideNav();
 
@@ -82,6 +88,7 @@ var getPlateXPosition = function(){
 	var plateXPosition = platePosition.left;
 	var pizzaXPosition = pizzaPosition.left;
 
+
 	console.log("plate Xpos: " + plateXPosition);
 	console.log("pizza Xpos: " + plateXPosition);
 }
@@ -89,7 +96,7 @@ var getPlateXPosition = function(){
 $(".confirmSize").attr("disabled", true);
 $(".plate").css("left", "+=" + movePlate * 24 + "px");
 $(".pizza").css("left", movePizza + "%");
-$(".pepperoni, .chicken, .italianSausage, .meatballs, .pepper, .olives, .spinach, .pineapple").css("left", movePizza + "%");
+// $(".pepperoni, .chicken, .italianSausage, .meatballs, .pepper, .olives, .spinach, .pineapple").css("left", movePizza + "%");
 // $(".addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", movePizza + "px");
 
 $(".pizza").css("display", "none");
@@ -108,7 +115,9 @@ $("#olives").attr("disabled", true);
 // ----------Start of Pizza Selection ------------- //
 
 $("#large").on("click", function(){
+	if(window.innerWidth > 600)	{
 		$(".pizza").css("display", "inline-block");
+	}
 		$(".pizza").addClass("addPizza");
 		cashSound.play();
 		cost = 0;
@@ -117,7 +126,9 @@ $("#large").on("click", function(){
 	})
 
 $("#medium").on("click", function(){
-	$(".pizza").css("display", "inline-block");
+	if(window.innerWidth > 600)	{
+		$(".pizza").css("display", "inline-block");
+	}
 	$(".pizza").addClass("addPizza");
 	cashSound.play();
 	cost = 0;
@@ -126,7 +137,9 @@ $("#medium").on("click", function(){
 	})
 
 $("#small").on("click", function(){
-	$(".pizza").css("display", "inline-block");
+	if(window.innerWidth > 600)	{
+		$(".pizza").css("display", "inline-block");
+	}
 	$(".pizza").addClass("addPizza");
 	cashSound.play();
 	cost = 0;
@@ -140,7 +153,7 @@ $(".confirmSize").on("click", function(){
 	}
 	$(".plate").css("left", "+=" + movePlate * 17 + "px");
 	$(".addPizza").css("left", "+=" + movePlate * 17 + "px");
-	$(".pepperoni, .chicken, .italianSausage, .meatballs").css("left", "+=" + movePizza + movePlate + movePlate + "px");
+//	$(".pepperoni, .chicken, .italianSausage, .meatballs").css("left", "+=" + (movePizza + 240)  + "px");
 //	$(".addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "+=" + movePlate * 17 + "px");
 	$(".confirmSize").attr("disabled", true);
 	$("#large").attr("disabled", true);
@@ -214,7 +227,7 @@ $("#pepperoni").on("click", function(){
 		$(".plate").css("left", "+=" + movePlate * 17 + "px");
 		getPlateXPosition();
 		$(".addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "+=" + movePlate * 17 + "px");
-		$(".pepper, .olives, .spinach, .pineapple").css("left", movePlate * 4.35 + "px");
+	//	$(".pepper, .olives, .spinach, .pineapple").css("left", movePlate * 4.35 + "px");
 		$(".confirmMeat").attr("disabled", true);
 		$("#pepperoni").attr("disabled", true);
 		$("#chicken").attr("disabled", true);

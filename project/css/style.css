@@ -93,6 +93,8 @@ h3{
 	visibility: hidden;
 }
 
+
+
 .placeholder{
 	height: 260px;
 	width: 250px;
@@ -125,8 +127,6 @@ h3{
 	transition: left 2s;
 }
 
-
-
 .addPepperoni{
 	background: url("../img/order/topping_pepperoni.png");
 }
@@ -150,7 +150,7 @@ h3{
 	position: absolute;
 /*	display: inline-block; */
 	top: +280px;
-/*	left: 42.5%; */
+	left: 43%; 
 	transition: left 2s;
 }
 
@@ -176,9 +176,9 @@ h3{
 	width: 200px;
 	background-size: contain;
 	position: absolute;
-	display: inline-block;
+/*	display: inline-block;  */
 	top: +280px;
-/*	left: 66.5%; */
+	left: 66.5%;
 	transition: left 2s;
 }
 
@@ -198,4 +198,61 @@ h3{
 	 width:100%;
 	 height:400px;
 	 margin: 0 auto;
+}
+
+@media screen and (max-width: 1100px) {
+    .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs {
+       left: 39.5%;
+    }
+
+    .addPepper, .addOlives, .addSpinach, .addPineapple{
+    	left: 64%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs {
+       left: 38%;
+    }
+
+    .addPepper, .addOlives, .addSpinach, .addPineapple{
+    	left: 62%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs {
+       left: 36%;
+    }
+
+    .addPepper, .addOlives, .addSpinach, .addPineapple{
+    	left: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .placeholder, .plate, .pizza, .addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs {
+       display: none;
+       position: fixed;
+       left: 0px;
+    }
+
+    .addPepper, .addOlives, .addSpinach, .addPineapple{
+    	display: none;
+    	position: fixed;
+    	left: 0px;
+    }
+
+    .size, .meat{
+    	border: none;
+    }
+
+    #costBox, #checkout, #restart{
+    	margin-left: 0px;
+    	margin-right: 0px;
+    	width: 80px;
+    	font-size: 12px;
+    	text-align: center;
+    	padding: 1px 0px;
+    }
 }
