@@ -13,10 +13,6 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-    <!-- Import bootstrap.css 
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
-    -->
 
     <!-- my css styling -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -136,7 +132,10 @@
 
 
     </div>
-    
+
+  </div>
+</div>    
+
 <!-- Start of Re-order button -->
  <a class="waves-effect waves-light btn restart" href="#" id="restart">Restart</a>
 
@@ -158,20 +157,49 @@
 
 <!-- End of Charges/Cost -->
 
+<!-- start mobile pizza -->
+
+
+      <div class="mPlaceholder"></div>
+    <!--  
+    <div class="mobilePlate">  
+      </div>
+    -->
+
+      <div class="mPizza"></div>
+      <div class="mPepperoni"></div>
+      <div class="mChicken"></div>
+      <div class="mItalianSausage"></div>
+      <div class="mMeatballs"></div>
+      <div class="mPepper"></div>
+      <div class="mOlives"></div>
+      <div class="mSpinach"></div>
+      <div class="mPineapple"></div>
+
+
+
+
 <!-- Start of Checkout Modal -->
 
   <div id="modal1" class="modal">
+
   <div class="row">
-    <div class="col s4"
-    <div class="modal-content">
-      <p> Your order is here:</p>
-      <div class="orderedPizza"></div>
-      <div class="orderedMeat"></div>
-      <div class="orderedVeggies"></div>
-      <div class="total"></div>
+    <div class="col s10">
+      <div class="modal-content">
+        <p>Below is your order:</p>
+
+        <table>
+        
+        <div class="orderedPizza"></div>
+        <div class="orderedMeat"></div>
+        <div class="orderedVeggies"></div>
+        <div class="total"></div>
+
+        </table>
+
      </div>
     </div>
- 
+  </div>
 
 
   <p class="white-text cyan darken-1">  Billing Information:</p>
@@ -200,7 +228,7 @@
 <div class="row">
   <div class="col s4 offset-s2">
     <label>City</label><input type="text" name="city">
-    </div>
+  </div>
   <div class="col s2 offset-s1">
     <label>State</label><input type="text" name="state">
   </div>
@@ -212,7 +240,7 @@
 <div class="row">
   <div class="col s6 offset-s2">
     <label>Credit Card Number</label><input type="text" name="creditCardNumber">
-    </div>
+  </div>
   <div class="col s2 offset-s1">
     <label>CVV</label><input type="text" name="state">
   </div>
@@ -225,19 +253,22 @@
 
   </div>
 
+</div>
 
 <!-- End of Checkout Modal -->
 
 <!-- Start of Final Payment Confirmation -->
 
   <div id="modalDone" class="modal">
-  <div class="row">
-    <div class="col s4 offset-s2"
-    <div class="modal-content">
-      <p> Thank You!</p>
-      <div> Your credit card has been charged:</div>
-      <div class="total"></div>
-     </div>
+    
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="modal-content">
+          <p> Thank You!</p>
+          <div> Your credit card has been charged:</div>
+          <div class="total"></div>
+        </div>
+      </div>
     </div>
 
 
@@ -272,16 +303,16 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">About Us</h5>
-          <p class="grey-text text-lighten-4">Our focus is your convenience – order online from your laptop, desktop, or smartphone 24 hours a day, 7 days a week. Our fast shipping, low prices, and outstanding customer service make WebstaurantStore the best choice to meet all of your professional and food service supply needs.</p>
+          <p class="grey-text text-lighten-4">Our focus is your convenience to order online from your laptop, desktop, or smartphone 24 hours a day, 7 days a week. Our fast shipping, low prices, and outstanding customer service make Frank's Pizza Takeout the best choice to order your fresh pizza.</p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links:</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="#">Home</a></li>
-            <li><a class="grey-text text-lighten-3" href="#">Order</a></li>
-            <li><a class="grey-text text-lighten-3" href="#">Types of PIzza</a></li>
-            <li><a class="grey-text text-lighten-3" href="#">Sign In</a></li>
-             <li><a class="white-text href="mailto:no-one@snai1mai1.com?subject='Frank's Pizza'">Contact Us</a></li>
+            <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="order.html">Order</a></li>
+            <li><a class="grey-text text-lighten-3" href="typesofpizza.html">Types of PIzza</a></li>
+            <li><a class="grey-text text-lighten-3" href="#modal2" id="modal2" class="signin">Sign In</a></li>
+             <li><a class="white-text" href="mailto:francis@devtechstar.com?Subject=Frank's%20Pizza" target="_top">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -289,7 +320,7 @@
 
     <div class="footer-copyright">
       <div class="container">
-        © 2017 Copyright DevTechStar 
+        &copy 2017 Copyright DevTechStar 
       <a class="grey-text text-lighten-4 right" href="#!">More</a>
       </div>
     </div>

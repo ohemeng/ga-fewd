@@ -17,27 +17,18 @@ var trip = [
 ];
 
 
-var changeTrip = function(indexYesSuper){
-    $("h1").text(trip[indexYesSuper]["city"] + ", "+ trip[indexYesSuper]['country']);
-    $("img").attr("src",trip[indexYesSuper]["photo"]);
-
-}
-
 $("#first").on("click", function(){
- // $("h1").text(trip[0]["city"] + ", "+ trip[0]['country']);
-  // $("img").attr("src",trip[0]["photo"]);
-  changeTrip(0);
+  $("h1").text(trip[0]["city"] + ", "+ trip[0]['country']);
+  $("img").attr("src",trip[0]["photo"]);
 
 })
 
 $("#second").on("click", function(){
- // $("h1").text(trip[1]["city"] + ", "+ trip[1]['country']);
- // $("img").attr("src",trip[1]["photo"]);
- changeTrip(1);
+  $("h1").text(trip[1]["city"] + ", "+ trip[1]['country']);
+ $("img").attr("src",trip[1]["photo"]);
 })
 
 $("#third").on("click", function(){
- // $("h1").text(trip[2]["city"] + ", "+ trip[2]['country']);
- // $("img").attr("src",trip[2]["photo"]);
- changeTrip(2);
+  $("h1").text(trip[2]["city"] + ", "+ trip[2]['country']);
+ $("img").attr("src",trip[2]["photo"]);
 })
