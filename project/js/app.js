@@ -602,6 +602,19 @@ $(".signin").on("click", function(){
     });
  });
 
+// --------- Start of Sign In SessionStorage ------ //
+
+ $(".login").on("click", function(){
+ 	console.log("Sign In clicked");
+ 	var myfirstname = $(".inputname").val();
+ 	localStorage.setItem("firstname", myfirstname);
+ 	$(".username").text(localStorage.getItem("firstname"));
+ })
+$(".username").text(localStorage.getItem("firstname"));
+
+
+ // ----- Start ModalDone ------ //
+
 $(".modalDone").on("click", function(){
  		$('.modal').modal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -646,6 +659,8 @@ var locations = [
         }
       })(marker, i));
     }
+
+
 
 // ---- End of Map of Locations --------------- //
 
