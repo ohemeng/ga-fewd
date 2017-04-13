@@ -626,6 +626,9 @@ $(".modalDone").on("click", function(){
     });
  });
 
+$(".done").on("click", function(){
+	$("#checkout").css("display", "none");
+})
 
 // --- Start of Map of Locations ----- //
 var locations = [
