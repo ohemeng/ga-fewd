@@ -299,6 +299,7 @@ $("#large").on("click", function(){
 	if(window.innerWidth > 600)	{
 		$(".pizza").css("display", "inline-block");
 	}
+		Materialize.toast('Remember to click "Confirm" when done!', 5000);
 		$(".pizza").addClass("addPizza");
 		cashSound.play();
 		cost = 0;
@@ -356,6 +357,7 @@ $(".confirmSize").on("click", function(){
 
 $("#pepperoni").on("click", function(){
 	if($("#pepperoni").is(":checked")){
+		Materialize.toast('Remember to click "Confirm" when done!', 5000);
 		$(".pepperoni").addClass("addPepperoni");
 		addCost("pepperoni");
 		cashSound.play();
@@ -426,6 +428,7 @@ $("#pepperoni").on("click", function(){
 	
 	$("#pepper").on("click", function(){
 		if($("#pepper").is(":checked")){
+			Materialize.toast('Remember to click "Confirm" when done!', 5000);
 			$(".pepper").addClass("addPepper");
 			addCost("pepper");
 			cashSound.play();
@@ -666,31 +669,6 @@ var locations = [
 
 
 // ---- End of Map of Locations --------------- //
-
-
-
-
-
-
-/*
-
- $(".closeModal").on("click", function(){
-		$('.modal').modal();
- })
- 
-*/
-
-// -----------End of Order ------------------------- //
-
-/*
-$(".moveBackward").on("click", function(){
-	console.log("mover clicked");
-	$("#pizza").css("left", "-=200px");
-});
-*/
-
-// End of buttons
-
 
 
 
