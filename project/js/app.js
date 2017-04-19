@@ -1,14 +1,8 @@
 console.log("jQuery has started");
 
-// var addPepperoniXpos = window.innerWidth / 1088 * 43;
-
-// console.log("Here is " + addPepperoniXpos);
-
-//	$(".addPepperoni").css("left", addPepperoniXpos + "%");
-
-
  $(".button-collapse").sideNav();
 
+// --------  Start of Side Navigation Menu ----- //
    $('.button-collapse').sideNav({
       menuWidth: 300, // Default is 300
       edge: 'right', // Choose the horizontal origin
@@ -18,7 +12,7 @@ console.log("jQuery has started");
   );
 
 
-// Start Owl-Carousel
+// ------- Start Owl-Carousel  ---------- //
 
 $('.owl-carousel').owlCarousel({
     loop:true,
@@ -41,16 +35,16 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-// End Owl-Carousel
+// -------- End Owl-Carousel  ------------- //
 
 
-// Start Order Carousel (bootstrap)
+// -------- Start Order Carousel (bootstrap)  ------- //
 
 $('.carousel').carousel({
   interval: 2000
 });
 
-// End Order Carousel (bootstrap)
+// -------- End Order Carousel (bootstrap)  --------- //
 
 
 // ----------Mobile / Start of Pizza Selection ------------- //
@@ -65,9 +59,6 @@ if(window.innerWidth <= 600)	{
 		})
 
 	$("#medium").on("click", function(){
-
-		//$(".mobilePlaceholder").css("display", "inline-block");
-		
 		$(".mPlaceholder").addClass("mobilePizza");
 		cashSound.play();
 		cost = 0;
@@ -76,9 +67,6 @@ if(window.innerWidth <= 600)	{
 		})
 
 	$("#small").on("click", function(){
-	
-	//		$(".pizza").css("display", "inline-block");
-
 		$(".mPlaceholder").addClass("mobilePizza");
 		cashSound.play();
 		cost = 0;
@@ -106,7 +94,6 @@ if(window.innerWidth <= 600)	{
 	$("#pepperoni").on("click", function(){
 	if($("#pepperoni").is(":checked")){
 		$(".mPepperoni").addClass("mobilePepperoni");
-	//	addCost("pepperoni");
 		cashSound.play();
 		} else {
 		$(".mPepperoni").removeClass("mobilePepperoni");
@@ -118,7 +105,6 @@ if(window.innerWidth <= 600)	{
 	$("#chicken").on("click", function(){
 	if($("#chicken").is(":checked")){
 		$(".mChicken").addClass("mobileChicken");
-	//	addCost("chicken");
 		cashSound.play();
 		} else {
 		$(".mChicken").removeClass("mobileChicken");
@@ -130,7 +116,6 @@ if(window.innerWidth <= 600)	{
 	$("#italianSausage").on("click", function(){
 	if($("#italianSausage").is(":checked")){
 		$(".mItalianSausage").addClass("mobileItalianSausage");
-	//	addCost("italianSausage");
 		cashSound.play();
 		} else {
 		$(".mItalianSausage").removeClass("mobileItalianSausage");
@@ -142,15 +127,12 @@ if(window.innerWidth <= 600)	{
 	$("#meatballs").on("click", function(){
 	if($("#meatballs").is(":checked")){
 		$(".mMeatballs").addClass("mobileMeatballs");
-	//	addCost("meatballs");
 		cashSound.play();
 		} else {
 		$(".mMeatballs").removeClass("mobileMeatballs");
 		removeCost("meatballs");
 		}
 	})
-
-
 
 	$(".confirmMeat").on("click", function(){
 		console.log("confirmMeat clicked");
@@ -168,12 +150,11 @@ if(window.innerWidth <= 600)	{
 		$("#olives").attr("disabled", false);
 	});
 
-// ---------------- Start of Vegetable Selection--------
+// ---------------- Start of Vegetable Selection-------- //
 	
 	$("#pepper").on("click", function(){
 		if($("#pepper").is(":checked")){
 			$(".mPepper").addClass("mobilePepper");
-		//	addCost("pepper");
 			cashSound.play();
 			} else {
 			$(".mPepper").removeClass("mobilePepper");
@@ -184,7 +165,6 @@ if(window.innerWidth <= 600)	{
 		$("#olives").on("click", function(){
 		if($("#olives").is(":checked")){
 			$(".mOlives").addClass("mobileOlives");
-		//	addCost("olives");
 			cashSound.play();
 			} else {
 			$(".mOlives").removeClass("mobileOlives");
@@ -196,7 +176,6 @@ if(window.innerWidth <= 600)	{
 		if($("#spinach").is(":checked")){
 			console.log("spinach was checked");
 			$(".mSpinach").addClass("mobileSpinach");
-		//	addCost("spinach");
 			cashSound.play();
 			} else {
 			$(".mSpinach").removeClass("mobileSpinach");
@@ -207,7 +186,6 @@ if(window.innerWidth <= 600)	{
 	$("#pineapple").on("click", function(){
 		if($("#pineapple").is(":checked")){
 			$(".mPineapple").addClass("mobilePineapple");
-		//	addCost("pineapple");
 			cashSound.play();
 			} else {
 			$(".mPineapple").removeClass("mobilePineapple");
@@ -222,14 +200,10 @@ if(window.innerWidth <= 600)	{
 		$("#pineapple").attr("disabled", true);
 		$("#spinach").attr("disabled", true);
 		$("#olives").attr("disabled", true);
-	
 	});
-
 }
 
 // ----------End of Mobile Pizza ------ //
-
-
 
 
 
@@ -241,6 +215,7 @@ var removeCost = function(item){
 	cost = cost - prices[item];
 	costFixed = cost.toFixed(2);
 	$("span#cost").text(costFixed);
+	$(".total").html("<tr><td>" + "Total Cost:" + "</td>" + "<td></td>" + "<td>" + "$" + costFixed + "</td></tr>");
 }
 
 var addCost = function(item){
@@ -277,8 +252,6 @@ var getPlateXPosition = function(){
 $(".confirmSize").attr("disabled", true);
 $(".plate").css("left", "+=" + movePlate * 24 + "px");
 $(".pizza").css("left", movePizza + "%");
-// $(".pepperoni, .chicken, .italianSausage, .meatballs, .pepper, .olives, .spinach, .pineapple").css("left", movePizza + "%");
-// $(".addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", movePizza + "px");
 
 $(".pizza").css("display", "none");
 $(".confirmMeat").attr("disabled", true);
@@ -335,8 +308,6 @@ $(".confirmSize").on("click", function(){
 	}
 	$(".plate").css("left", "+=" + movePlate * 17 + "px");
 	$(".addPizza").css("left", "+=" + movePlate * 17 + "px");
-//	$(".pepperoni, .chicken, .italianSausage, .meatballs").css("left", "+=" + (movePizza + 240)  + "px");
-//	$(".addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "+=" + movePlate * 17 + "px");
 	$(".confirmSize").attr("disabled", true);
 	$("#large").attr("disabled", true);
 	$("#medium").attr("disabled", true);
@@ -352,8 +323,6 @@ $(".confirmSize").on("click", function(){
 });
 
 // --------------- Start of Meat Selection -----------------------------------
-// $(".pepperoni, .chicken, .italianSausage, .meatballs").css("left", movePlate  31 + "px");
-//	 $(".addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "+" + movePlate * 50 + "px");
 
 $("#pepperoni").on("click", function(){
 	if($("#pepperoni").is(":checked")){
@@ -403,14 +372,11 @@ $("#pepperoni").on("click", function(){
 		}
 	})
 
-
-
 	$(".confirmMeat").on("click", function(){
 		console.log("confirmMeat clicked");
 		$(".plate").css("left", "+=" + movePlate * 17 + "px");
 		getPlateXPosition();
 		$(".addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs").css("left", "+=" + movePlate * 17 + "px");
-	//	$(".pepper, .olives, .spinach, .pineapple").css("left", movePlate * 4.35 + "px");
 		$(".confirmMeat").attr("disabled", true);
 		$("#pepperoni").attr("disabled", true);
 		$("#chicken").attr("disabled", true);
@@ -496,7 +462,11 @@ var prices = {
 	pepper: 0.99,
 	olives: 0.99,
 	pineapple: 0.99,
-	spinach: 0.99
+	spinach: 0.99,
+	cheesePizza: 13.99,
+	pepperoniPizza: 15.98,
+	meatPizza: 15.98,
+	supremePizza: 17.97
 }
 
 $(".confirmSize").on("click", function(){
@@ -527,26 +497,21 @@ $(".confirmMeat").on("click", function(){
 			$(".orderedMeat").append("<tr><td>" + 'Pepperoni:' + "</td>" + "<td> </td>" + "<td>" + "$" + prices["pepperoni"] + "</td></tr>");
 
 			meatOrder = meatOrder + " Pepperoni";
-		//	numOfMeats = numOfMeats + 1;
 	}
 	if ($("#chicken").is(":checked")) {
 			$(".orderedMeat").append("<tr><td>" + 'Chicken:' + "</td>" + "<td> </td>" + "<td>" + "$" + prices["chicken"] + "</td></tr>");
 
 			meatOrder = meatOrder + " Chicken";
-		//	numOfMeats = numOfMeats + 1;
 	}
 		if ($("#italianSausage").is(":checked")) {
 			$(".orderedMeat").append("<tr><td>" + 'Italian Sausage:' + "</td>" + "<td></td>" + "<td>" +  "$" + prices["italianSausage"] + "</td></tr>");
 			meatOrder = meatOrder + " Italian Sausage";
-		//	numOfMeats = numOfMeats + 1;
 	}
 		if ($("#meatballs").is(":checked")) {
 			$(".orderedMeat").append("<tr><td>" + 'Meatballs:' + "</td>" + "<td></td>"  + "<td>" + "$" + prices["meatballs"] + "</td></tr>");
 			meatOrder = meatOrder + " Meatballs";
-		//	numOfMeats = numOfMeats + 1;
 	}
-	//	$(".orderedMeat").text(meatOrder + " : $" + (1.99 * numOfMeats));
-
+	
 })
 
 $(".confirmVeggies").on("click", function(){
@@ -556,28 +521,21 @@ $(".confirmVeggies").on("click", function(){
 	if ($("#pepper").is(":checked")) {
 			$(".orderedVeggies").append("<tr><td>" + 'Pepper:' + "</td>" + "<td></td>"  + "<td>"  + "$" + prices["pepper"] + "</td></tr>");
 			veggiesOrder = veggiesOrder + " Pepper";
-		//	numOfVeggies = numOfVeggies + 1;
 	}
 	if ($("#olives").is(":checked")) {
 			$(".orderedVeggies").append("<tr><td>" + 'Olives:' + "</td>" + "<td></td>" +  "<td>"   + "$" + prices["olives"] + "</td></tr>");
 			veggiesOrder = veggiesOrder + " Olives";
-		//	numOfVeggies = numOfVeggies + 1;
 	}
 		if ($("#pineapple").is(":checked")) {
 			$(".orderedVeggies").append("<tr><td>" + 'Pineapple:' + "</td>" + "<td></td>" + "<td>" + "$" + prices["pineapple"] + "</td></tr>");
 			veggiesOrder = veggiesOrder + " Pineapple";
-		//	numOfVeggies = numOfVeggies + 1;
 	}
 		if ($("#spinach").is(":checked")) {
 			$(".orderedVeggies").append("<tr><td>" + 'Spinach:' + "</td>" + "<td></td>" + "<td>" + "$" + prices["spinach"] + "</td></tr>");
 			veggiesOrder = veggiesOrder + " Spinach";
-		//	numOfVeggies = numOfVeggies + 1;
 	}
-	//	$(".orderedVeggies").text(veggiesOrder + " : $" + (0.99 * numOfVeggies).toFixed(2));
-
+	
 	});
-
-
 
 $(".mymodal").on("click", function(){
  		$('.modal').modal({
@@ -633,7 +591,122 @@ $(".done").on("click", function(){
 	$("#checkout").css("display", "none");
 })
 
+// ----- Start Pre-made Pizza ------ //
+var numOfCheesePizzas = 0;
+var cheesePizzaClassName = "cheesePizza2";
+var cheesePizzaOrderedArray = [];
+
+var numOfPepperoniPizzas = 0;
+var pepperoniPizzaClassName = "pepperoniPizza2";
+var pepperoniPizzaOrderedArray = [];
+
+var numOfMeatPizzas = 0;
+var meatPizzaClassName = "meatPizza2";
+var meatPizzaOrderedArray = [];
+
+var numOfSupremePizzas = 0;
+var supremePizzaClassName = "supremePizza2";
+var supremePizzaOrderedArray = [];
+
+
+$(".orderedCheesePizza").on("click", function(){
+	numOfCheesePizzas = numOfCheesePizzas + 1;
+	cheesePizzaClassName = cheesePizzaClassName + numOfCheesePizzas;
+	cheesePizzaOrderedArray.push(cheesePizzaClassName);
+	var trow = $("<tr class =" + cheesePizzaClassName + "><td>" + "Cheese Pizza" + ":" + "</td>" + "<td> </td>" + "<td>" + "$" + prices["cheesePizza"] + "</td><td><a href='#' class='removeCheesePizzaOrder'>remove</a></td>" + "</tr>");
+	$(".orderedPizza").append(trow);
+	addCost("cheesePizza");
+
+
+/*
+
+	// tr.find("a.removeCheesePizzaOrder").on("click", function() {
+//	$("tr").find("a.removeCheesePizzaOrder").on("click", function() {
+	trow.find("a.removeCheesePizzaOrder").on("click", function() {
+	 	console.log(cheesePizzaClassName + " removed");
+	// $(".cheesePizzaClassName").css("display", "none");
+		var cheesePizzaLast = cheesePizzaOrderedArray[cheesePizzaOrderedArray.length - 1];
+		console.log("Last cheese class was " + cheesePizzaLast);
+		console.log("This is the array " + cheesePizzaOrderedArray);
+	// $(".cheesePizzaClassName").css("display", "none");
+		//$(cheesePizzaLast).css("display", "none");
+		// cheesePizzaLast.css("display", "none");
+	//	$("tr").addClass("orderNoCheesePizza");
+		$(cheesePizzaLast).addClass("orderNoCheesePizza");
+
+	 	removeCost("cheesePizza");
+	})
+*/
+
+	$("tr."  + cheesePizzaClassName).on("click", function(event) {
+  	var title = $(event.target).text();
+  	cheesePizzaClassName = cheesePizzaOrderedArray.pop();
+  	$("tr." + cheesePizzaClassName).toggleClass("orderNoCheesePizza");
+  	removeCost("cheesePizza");
+	})
+
+})
+
+
+$(".orderedPepperoniPizza").on("click", function(){
+	numOfPepporoniPizzas = numOfPepperoniPizzas + 1;
+	pepperoniPizzaClassName = pepperoniPizzaClassName + numOfPepperoniPizzas;
+	pepperoniPizzaOrderedArray.push(pepperoniPizzaClassName);
+
+	var trow = $("<tr class =" + pepperoniPizzaClassName + "><td>" + "Pepperoni Pizza" + ":" + "</td>" + "<td> </td>" + "<td>" + "$" + prices["pepperoniPizza"] + "</td><td><a href='#' class='removePepperoniPizzaOrder'>remove</a></td>" + "</tr>");
+	$(".orderedPizza").append(trow);
+	addCost("pepperoniPizza");
+
+	$("tr."  + pepperoniPizzaClassName).on("click", function(event) {
+  	var title = $(event.target).text();
+  	pepperoniPizzaClassName = pepperoniPizzaOrderedArray.pop();
+  	$("tr." + pepperoniPizzaClassName).toggleClass("orderedNoPepperoniPizza");
+  	removeCost("pepperoniPizza");
+	})	
+
+})
+
+$(".orderedMeatPizza").on("click", function(){
+	numOfMeatPizzas = numOfMeatPizzas + 1;
+	meatPizzaClassName = meatPizzaClassName + numOfMeatPizzas;
+	meatPizzaOrderedArray.push(meatPizzaClassName);
+
+	var trow = $("<tr class =" + meatPizzaClassName +  "><td>" + "Meat Pizza" + ":" + "</td>" + "<td> </td>" + "<td>" + "$" + prices["meatPizza"] + "</td>td><a href='#' class='removeMeatPizzaOrder'>remove</a></td>" + "</tr>");
+	
+	$(".orderedPizza").append(trow);
+	console.log(trow);
+	
+	addCost("meatPizza");
+
+	$("tr."  + meatPizzaClassName).on("click", function(event) {
+  	var title = $(event.target).text();
+  	meatPizzaClassName = meatPizzaOrderedArray.pop();
+  	$("tr." + meatPizzaClassName).toggleClass("orderedNoMeatPizza");
+  	removeCost("meatPizza");
+	})		
+
+})
+
+$(".orderedSupremePizza").on("click", function(){
+	$(".orderedPizza").append("<tr><td>" + "Supreme Pizza" + ":" + "</td>" + "<td> </td>" + "<td>" + "$" + prices["supremePizza"] + "</td></tr>");
+	addCost("supremePizza");
+})
+
+// ---- Remove Pre-made Order -------- //
+
+
+
+
+// tr.find("a.removeCheesePizzaOrder").on("click", function() {
+// 	console.log("removeOrder clicked");
+// 	$(".cheesePizza2").css("display", "none");
+// 	removeCost("cheesePizza");
+// })
+
+
+
 // --- Start of Map of Locations ----- //
+
 var locations = [
       ['Queens, NY', 40.7282, -73.7949, 4],
       ['Woodbridge, NJ', 40.5576, -74.2846, 5],
@@ -665,8 +738,6 @@ var locations = [
         }
       })(marker, i));
     }
-
-
 
 // ---- End of Map of Locations --------------- //
 

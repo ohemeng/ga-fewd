@@ -80,7 +80,7 @@
               <p>Classic marinara sauce topped with whole milk mozzarella cheese.</p>
             </div>
             <div class="card-action hoverable">
-              <a href="#">Order this pizza</a>
+              <a class="mymodal orderedCheesePizza" href="#modal1">Order this pizza</a>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@
               <p>Classic marinara sauce with authentic old-world italian style pepperoni.</p>
             </div>
             <div class="card-action hoverable">
-              <a href="#">Order this pizza</a>
+              <a class="mymodal orderedPepperoniPizza" href="#modal1">Order this pizza</a>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
               <p>Classic marinara sauce, authentic old-world pepperoni, all-natural Italian sausage, slow-roasted ham, hardwood smoked bacon, seasoned pork and beef.</p>
             </div>
             <div class="card-action hoverable">
-              <a href="#">Order this pizza</a>
+              <a class="mymodal orderedMeatPizza" href="#modal1">Order this pizza</a>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@
               <p>Classic marinara sauce, authentic old-world pepperoni, seasoned pork, beef, fresh mushrooms, fresh green bell peppers and fresh red onions.</p>
             </div>
             <div class="card-action hoverable">
-              <a href="#">Order this pizza</a>
+              <a class="mymodal orderedSupremePizza" href="#modal1">Order this pizza</a>
             </div>
           </div>
         </div>
@@ -137,14 +137,115 @@
               <span class="card-title black-text">Build Your Own Pizza</span>
             </div>
             <div class="card-content">
-              <p>CCreate a pizza with your choice of delicious crusts, sauces and ingredients. Flavor up for free with a crust flavor.</p>
+              <p>Create a pizza with your choice of delicious crusts, sauces and ingredients. Flavor up for free with a crust flavor.</p>
             </div>
             <div class="card-action hoverable">
-              <a href="#">Order this pizza</a>
+              <a href="order.html">Order this pizza</a>
             </div>
           </div>
         </div>
       </div>
+
+
+
+<!-- Start of Checkout Modal -->
+
+  <div id="modal1" class="modal">
+
+  <div class="row">
+    <div class="col s10">
+      <div class="modal-content">
+        <p>Below is your order:</p>
+
+        <table>
+        
+        <div class="orderedPizza"></div>
+        <div class="orderedMeat"></div>
+        <div class="orderedVeggies"></div>
+        <div class="total"></div>
+
+        </table>
+
+     </div>
+    </div>
+  </div>
+
+
+  <p class="white-text cyan darken-1">  Billing Information:</p>
+  <div class="row">
+    <div class="col s12 offset-s2">
+      <label>Last Name</label><input type="text" name="lastname">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 offset-s2">
+      <label>First Name</label><input type="text" name="firstname">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 offset-s2">
+      <label>Address 1</label><input type="text" name="address1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 offset-s2">
+      <label>Address 2</label><input type="text" name="address2">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s4 offset-s2">
+      <label>City</label><input type="text" name="city">
+    </div>
+    <div class="col s2 offset-s1">
+      <label>State</label><input type="text" name="state">
+    </div>
+    <div class="col s2 offset-s2">
+      <label>Zip Code</label><input type="text" name="zip">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6 offset-s2">
+      <label>Credit Card Number</label><input type="text" name="creditCardNumber">
+  </div>
+    <div class="col s2 offset-s1">
+      <label>CVV</label><input type="text" name="state">
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect waves-green btn-flat cancel">Cancel</a>
+    <a class="modal-action modal-close waves-effect waves-green btn-flat pay modalDone" href ="#modalDone">Pay</a>
+  </div>
+
+</div>
+
+<!-- End of Checkout Modal -->
+
+<!-- Start of Final Payment Confirmation -->
+
+  <div id="modalDone" class="modal">
+    
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="modal-content">
+          <p> Thank You!</p>
+          <div> Your credit card has been charged:</div>
+          <div class="total"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal-footer">
+      <a class="modal-action modal-close waves-effect waves-green btn-flat done">Done</a>
+    </div>
+
+  </div>
+
+
 
       <!--  Start of Sign-In Modal-->
 
