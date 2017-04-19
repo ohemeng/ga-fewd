@@ -215,14 +215,14 @@ var removeCost = function(item){
 	cost = cost - prices[item];
 	costFixed = cost.toFixed(2);
 	$("span#cost").text(costFixed);
-	$(".total").html("<tr><td>" + "Total Cost:" + "</td>" + "<td></td>" + "<td>" + "$" + costFixed + "</td></tr>");
+	$(".total").html("<tr><td>" + "Total Cost:" + "</td>" + "<td></td>" + "<td>" + "$" + costFixed + "</td>" + "</tr>");
 }
 
 var addCost = function(item){
 	cost = cost + prices[item];
 	costFixed = cost.toFixed(2);
 	$("span#cost").text(costFixed);
-	$(".total").html("<tr><td>" + "Total Cost:" + "</td>" + "<td></td>" + "<td>" + "$" + costFixed + "</td></tr>");
+	$(".total").html("<tr><td>" + "Total Cost:" + "</td>" + "<td></td>" + "<td>" + "$" + costFixed + "</td>" + "</tr>");
 }
 
 if(cost === 0){
@@ -617,31 +617,10 @@ $(".orderedCheesePizza").on("click", function(){
 	$(".orderedPizza").append(trow);
 	addCost("cheesePizza");
 
-
-/*
-
-	// tr.find("a.removeCheesePizzaOrder").on("click", function() {
-//	$("tr").find("a.removeCheesePizzaOrder").on("click", function() {
-	trow.find("a.removeCheesePizzaOrder").on("click", function() {
-	 	console.log(cheesePizzaClassName + " removed");
-	// $(".cheesePizzaClassName").css("display", "none");
-		var cheesePizzaLast = cheesePizzaOrderedArray[cheesePizzaOrderedArray.length - 1];
-		console.log("Last cheese class was " + cheesePizzaLast);
-		console.log("This is the array " + cheesePizzaOrderedArray);
-	// $(".cheesePizzaClassName").css("display", "none");
-		//$(cheesePizzaLast).css("display", "none");
-		// cheesePizzaLast.css("display", "none");
-	//	$("tr").addClass("orderNoCheesePizza");
-		$(cheesePizzaLast).addClass("orderNoCheesePizza");
-
-	 	removeCost("cheesePizza");
-	})
-*/
-
 	$("tr."  + cheesePizzaClassName).on("click", function(event) {
   	var title = $(event.target).text();
   	cheesePizzaClassName = cheesePizzaOrderedArray.pop();
-  	$("tr." + cheesePizzaClassName).toggleClass("orderNoCheesePizza");
+  	$("tr." + cheesePizzaClassName).toggleClass("orderedNoCheesePizza");
   	removeCost("cheesePizza");
 	})
 
@@ -670,12 +649,8 @@ $(".orderedMeatPizza").on("click", function(){
 	numOfMeatPizzas = numOfMeatPizzas + 1;
 	meatPizzaClassName = meatPizzaClassName + numOfMeatPizzas;
 	meatPizzaOrderedArray.push(meatPizzaClassName);
-
-	var trow = $("<tr class =" + meatPizzaClassName +  "><td>" + "Meat Pizza" + ":" + "</td>" + "<td> </td>" + "<td>" + "$" + prices["meatPizza"] + "</td>td><a href='#' class='removeMeatPizzaOrder'>remove</a></td>" + "</tr>");
-	
+	var trow = $("<tr class =" + meatPizzaClassName +  "><td>" + "Meat Pizza" + ":" + "</td>" + "<td> </td>" + "<td>" + "$" + prices["meatPizza"] + "</td><td><a href='#' class='removeMeatPizzaOrder'>remove</a></td>" + "</tr>");
 	$(".orderedPizza").append(trow);
-	console.log(trow);
-	
 	addCost("meatPizza");
 
 	$("tr."  + meatPizzaClassName).on("click", function(event) {
@@ -688,8 +663,20 @@ $(".orderedMeatPizza").on("click", function(){
 })
 
 $(".orderedSupremePizza").on("click", function(){
-	$(".orderedPizza").append("<tr><td>" + "Supreme Pizza" + ":" + "</td>" + "<td> </td>" + "<td>" + "$" + prices["supremePizza"] + "</td></tr>");
+	numOfSupremePizzas = numOfSupremePizzas + 1;
+	supremePizzaClassName = supremePizzaClassName + numOfSupremePizzas;
+	supremePizzaOrderedArray.push(supremePizzaClassName);
+	var trow = $("<tr class =" + supremePizzaClassName + "><td>" + "Supreme Pizza" + ":" + "</td>" + "<td> </td>" + "<td>" + "$" + prices["supremePizza"] + "</td><td><a href='#' class='removeSupremePizzaOrder'>remove</a></td>" + "</tr>");
+	$(".orderedPizza").append(trow);
 	addCost("supremePizza");
+
+	$("tr."  + supremePizzaClassName).on("click", function(event) {
+  	var title = $(event.target).text();
+  	supremePizzaClassName = supremePizzaOrderedArray.pop();
+  	$("tr." + supremePizzaClassName).toggleClass("orderedNoSupremePizza");
+  	removeCost("supremePizza");
+	})	
+
 })
 
 // ---- Remove Pre-made Order -------- //

@@ -210,7 +210,7 @@ td {
 	 margin: 0 auto;
 }
 
-.orderNoCheesePizza, .orderedNoMeatPizza, .orderedNoSupremePizza, .orderedNoPepperoniPizza{
+.orderedNoCheesePizza, .orderedNoMeatPizza, .orderedNoSupremePizza, .orderedNoPepperoniPizza{
 	display: none;
 }
 
