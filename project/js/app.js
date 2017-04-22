@@ -618,7 +618,6 @@ $(".orderedCheesePizza").on("click", function(){
 	addCost("cheesePizza");
 
 	$("tr."  + cheesePizzaClassName).on("click", function(event) {
-  	var title = $(event.target).text();
   	cheesePizzaClassName = cheesePizzaOrderedArray.pop();
   	$("tr." + cheesePizzaClassName).toggleClass("orderedNoCheesePizza");
   	removeCost("cheesePizza");
@@ -637,7 +636,6 @@ $(".orderedPepperoniPizza").on("click", function(){
 	addCost("pepperoniPizza");
 
 	$("tr."  + pepperoniPizzaClassName).on("click", function(event) {
-  	var title = $(event.target).text();
   	pepperoniPizzaClassName = pepperoniPizzaOrderedArray.pop();
   	$("tr." + pepperoniPizzaClassName).toggleClass("orderedNoPepperoniPizza");
   	removeCost("pepperoniPizza");
@@ -654,7 +652,6 @@ $(".orderedMeatPizza").on("click", function(){
 	addCost("meatPizza");
 
 	$("tr."  + meatPizzaClassName).on("click", function(event) {
-  	var title = $(event.target).text();
   	meatPizzaClassName = meatPizzaOrderedArray.pop();
   	$("tr." + meatPizzaClassName).toggleClass("orderedNoMeatPizza");
   	removeCost("meatPizza");
@@ -671,26 +668,12 @@ $(".orderedSupremePizza").on("click", function(){
 	addCost("supremePizza");
 
 	$("tr."  + supremePizzaClassName).on("click", function(event) {
-  	var title = $(event.target).text();
   	supremePizzaClassName = supremePizzaOrderedArray.pop();
   	$("tr." + supremePizzaClassName).toggleClass("orderedNoSupremePizza");
   	removeCost("supremePizza");
 	})	
 
 })
-
-// ---- Remove Pre-made Order -------- //
-
-
-
-
-// tr.find("a.removeCheesePizzaOrder").on("click", function() {
-// 	console.log("removeOrder clicked");
-// 	$(".cheesePizza2").css("display", "none");
-// 	removeCost("cheesePizza");
-// })
-
-
 
 // --- Start of Map of Locations ----- //
 
