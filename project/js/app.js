@@ -675,6 +675,26 @@ $(".orderedSupremePizza").on("click", function(){
 
 })
 
+// ------- Start of Password -------- //
+
+$(".login").attr("disabled", true);
+
+$(".password").keyup(function(){
+	if($(".password").val().length <= 5){
+		$("#passwordStatus").text("Password should be 6 or more characters");
+		$("#passwordStatus").css("color", "red");
+		$(".login").attr("disabled", true);
+	}else{
+		$("#passwordStatus").text("Your password length is good");
+			$("#passwordStatus").css("color", "green");
+		$(".login").attr("disabled", false);
+
+	}
+	
+	
+})
+
+
 // --- Start of Map of Locations ----- //
 
 var locations = [
