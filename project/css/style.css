@@ -101,8 +101,6 @@ h3{
 	visibility: hidden;
 }
 
-
-
 .placeholder{
 	height: 260px;
 	width: 250px;
@@ -156,7 +154,6 @@ h3{
 	width: 200px;
 	background-size: contain;
 	position: absolute;
-/*	display: inline-block; */
 	top: +330px;
 	left: 43%; 
 	transition: left 2s;
@@ -184,7 +181,6 @@ h3{
 	width: 200px;
 	background-size: contain;
 	position: absolute;
-/*	display: inline-block;  */
 	top: +330px;
 	left: 66.5%;
 	transition: left 2s;
@@ -245,6 +241,7 @@ td:nth-child(3){
 	color: red;
 }
 
+/* --------Responsiveness starts here for mobile devices ---- */
 
 @media screen and (max-width: 1100px) {
     .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs {
@@ -348,7 +345,7 @@ td:nth-child(3){
 			background: url("../img/order/topping_pineapple.png");
 		}
 
-    .mobilePizza, .mobilePepperoni, .mobileChicken, .mobileItalianSausage, .mobileMeatballs,  .mobilePepper, .mobileOlives, .mobileSpinach, .mobilePineapple{
+   .mobilePizza, .mobilePepperoni, .mobileChicken, .mobileItalianSausage, .mobileMeatballs,  .mobilePepper, .mobileOlives, .mobileSpinach, .mobilePineapple{
     	height: 200px;
     	width: 200px;
     	position: absolute;

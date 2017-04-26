@@ -54,8 +54,6 @@ if(window.innerWidth <= 600)	{
 	$("#large").on("click", function(){
 		cashSound.play();
 		$(".mPlaceholder").addClass("mobilePizza");
-		console.log("mobilepizza added");
-		//$(".mobilePizza").css("display", "inline-block");
 		})
 
 	$("#medium").on("click", function(){
@@ -136,7 +134,6 @@ if(window.innerWidth <= 600)	{
 
 	$(".confirmMeat").on("click", function(){
 		console.log("confirmMeat clicked");
-		//	$(".pepper, .olives, .spinach, .pineapple").css("left", movePlate * 4.35 + "px");
 		$(".confirmMeat").attr("disabled", true);
 		$("#pepperoni").attr("disabled", true);
 		$("#chicken").attr("disabled", true);
@@ -688,10 +685,7 @@ $(".password").keyup(function(){
 		$("#passwordStatus").text("Your password length is good");
 			$("#passwordStatus").css("color", "green");
 		$(".login").attr("disabled", false);
-
 	}
-	
-	
 })
 
 
