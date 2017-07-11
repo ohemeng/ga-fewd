@@ -1,0 +1,405 @@
+
+.row{
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+#topHeader{
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
+
+.logoCircle{
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	background-color: white;
+	border-radius: 100%;
+	margin-left: 1%;
+	margin-top: 0.25%;
+}
+
+.logo{
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+#heading:hover{
+	text-decoration: none;
+}
+
+#costBox{
+	width: 15%;
+	height:5%;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	border-radius: 10%;
+	display: inline-block;
+	font-size: 18px;
+	position: relative;
+	left: 30%;
+	margin-bottom: 2%;
+	text-align: center;
+	box-shadow: 2px 2px 2px black;
+}
+
+#checkout{
+	width: 15%;
+	height: 5%;
+	color: white;
+	border-radius: 10%;
+	display: inline-block;
+	position: relative;
+	left: 52%;
+	margin-bottom: 2%;
+	text-align: center;
+}
+
+#checkout a{
+	text-decoration: none;
+	color: white;
+}
+
+.lgNav{
+	font-size: 20px;
+}
+
+.lgNav a:hover{
+	background-color: #00cc99;
+}
+
+.mainPic{
+	height: 300px;
+	width: 100%;
+	background-image: url("../img/pizza1.jpeg");
+	background-size: cover;
+}
+
+
+#deals{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+h3{
+	text-decoration: underline;
+
+}
+#selection{
+	border: 1px solid black;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.size, .meat{
+	border-right: 1px solid black;
+}
+
+.other{
+	visibility: hidden;
+}
+
+.placeholder{
+	height: 260px;
+	width: 250px;
+	position: relative;
+	top: 22%;
+	left:0%;
+	transition: left 2s;
+}
+
+.plate{
+	height: 260px;
+	width: 250px;
+	background: url(../img/order/paperplate.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: +300px;
+	left:-200px;
+	transition: left 2s;
+}
+
+.addPizza{
+	height: 200px;
+	width: 200px;
+	background: url("../img/order/cheese_1.png");
+	background-size: contain;
+	position: absolute;
+	top: +330px;
+	/* left: 10%; */
+	transition: left 2s;
+}
+
+.addPepperoni{
+	background: url("../img/order/topping_pepperoni.png");
+}
+
+.addChicken{
+	background: url("../img/order/topping_chicken.png");
+}
+
+.addItalianSausage{
+	background: url("../img/order/topping_italiansausage.png");
+}
+
+.addMeatballs{
+	background: url("../img/order/topping_meatball.png");
+}
+
+.addPepperoni, .addChicken, .addItalianSausage, .addMeatballs{
+	height: 200px;
+	width: 200px;
+	background-size: contain;
+	position: absolute;
+	top: +330px;
+	left: 43%; 
+	transition: left 2s;
+}
+
+.addPepper{
+	background: url("../img/order/topping_pepper.png");
+
+}
+
+.addOlives{
+	background: url("../img/order/topping_olives.png");
+}
+
+.addSpinach{
+	background: url("../img/order/topping_spinach.png");
+}
+
+.addPineapple{
+	background: url("../img/order/topping_pineapple.png");
+}
+
+.addPepper, .addOlives, .addSpinach, .addPineapple{
+	height: 200px;
+	width: 200px;
+	background-size: contain;
+	position: absolute;
+	top: +330px;
+	left: 66.5%;
+	transition: left 2s;
+}
+
+#checkoutPage{
+	height: 20%;
+	width: 80%;
+	border: 1px solid black;
+	color: black;
+}
+
+table{
+	table-layout: fixed;
+	width: 600px;
+}
+td{
+	width: 140px;
+	padding-right: 0px;
+}
+
+td:nth-child(3){
+	width: 50px;
+	text-align: right;
+}
+
+ td:nth-child(4){
+ 	padding-left: 20px;
+ }
+
+.total{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+
+#map{
+	 width:100%;
+	 height:400px;
+	 margin: 0 auto;
+}
+
+.orderedNoCheesePizza, .orderedNoMeatPizza, .orderedNoSupremePizza, .orderedNoPepperoniPizza{
+	display: none;
+}
+
+.pizza_boy{
+	position: absolute;
+	background-size: contain;
+	background-image: url("../img/order/pizza_boy.gif");
+	background-repeat: no-repeat;
+	height: 60px;
+	width: 60px;
+	left: 40%;
+}
+
+#passwordStatus{
+	color: red;
+}
+
+/* --------Responsiveness starts here for mobile devices ---- */
+
+@media screen and (max-width: 1100px) {
+    .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs {
+       left: 39.5%;
+    }
+
+    .addPepper, .addOlives, .addSpinach, .addPineapple{
+    	left: 64%;	
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+	  #title{
+    	font-size: 20px;
+    }
+
+    #checkoutPage{
+			height: 80vw;
+			width: 80vw;
+			border: 1px solid black;
+			color: black;
+		}
+
+		table{
+			table-layout: fixed;
+			width: 400px;
+		}
+
+		td{
+			width: 140px;
+			padding-right: 0px;
+		}
+
+		td:nth-child(3){
+			width: 50px;
+			text-align: right;
+		}
+
+		 td:nth-child(4){
+		 	padding-left: 20px;
+		}
+
+		.total{
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+		}
+
+    .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs {
+       left: 38%;
+    }
+
+    .addPepper, .addOlives, .addSpinach, .addPineapple{
+    	left: 62%;
+    }
+
+
+}
+
+@media screen and (max-width: 860px) {
+    .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs {
+       left: 36%;
+    }
+
+    .addPepper, .addOlives, .addSpinach, .addPineapple{
+    	left: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .placeholder, .plate, .pizza, .addPizza, .addPepperoni, .addChicken, .addItalianSausage, .addMeatballs {
+       display: none;
+       position: fixed;
+       left: 0px;
+    }
+
+    .addPepper, .addOlives, .addSpinach, .addPineapple{
+    	display: none;
+    	position: fixed;
+    	left: 0px;
+    }
+
+    .size, .meat{
+    	border: none;
+    }
+
+    #costBox, #checkout, #restart{
+    	margin-left: 0px;
+    	margin-right: 0px;
+    	width: 15vw;
+    	font-size: 12px;
+    	text-align: center;
+    	padding: 1px 0px;
+    }
+
+    #checkout{
+    	width:20vw;
+    	left:38vw;
+    }
+
+    #costBox{
+    	left:20vw;
+    }
+
+    .mPlaceholder{
+    	height: 20vw;
+    	width: 20vw;
+    	position: relative;
+    	left: 260px;
+    	top: 220px;
+    }
+
+    .mobilePizza{
+    	background: url("../img/order/cheese_1.png");
+    }
+
+
+		.mobilePepperoni{
+			background: url("../img/order/topping_pepperoni.png");
+		}
+
+		.mobileChicken{
+			background: url("../img/order/topping_chicken.png");
+		}
+
+		.mobileItalianSausage{
+			background: url("../img/order/topping_italiansausage.png");
+		}
+
+		.mobileMeatballs{
+			background: url("../img/order/topping_meatball.png");
+		}
+
+    .mobilePepper{
+			background: url("../img/order/topping_pepper.png");
+
+		}
+
+		.mobileOlives{
+			background: url("../img/order/topping_olives.png");
+		}
+
+		.mobileSpinach{
+			background: url("../img/order/topping_spinach.png");
+		}
+
+		.mobilePineapple{
+			background: url("../img/order/topping_pineapple.png");
+		}
+
+   .mobilePizza, .mobilePepperoni, .mobileChicken, .mobileItalianSausage, .mobileMeatballs,  .mobilePepper, .mobileOlives, .mobileSpinach, .mobilePineapple{
+    	height: 30vw;
+    	width: 30vw;
+    	position: absolute;
+    	left: 190px;
+    	top: 220px;
+    	display: inline-block;
+    	background-size: contain;	
+    }
+
+}

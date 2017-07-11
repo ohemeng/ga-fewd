@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+  DevTechStar | Websites, Mobile Apps, Development Training ! Hangman - Med Term
+  </title>
+  <link rel="icon" type="image/png" href="img/logodts_3.png">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700,400|Merriweather:700,700italic|Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+  
+<!-- Contents Start Here -->
+
+<h5 id="heading"> Hangman - Med Term</h5>
+
+<!--
+<h6>Select Subject</h6>
+<div class="selection">
+ <label for="medterm">Med Term</label><input type="radio" name="subject" value="medterm"  id="medterm" class="with-gap" checked="checked"> 
+</div>
+<div class="selection">
+ <label for="urinary">Urinary</label><input type="radio" name="subject" value="urinary"  id="urinary" class="with-gap">
+</div>
+
+-->
+
+<div>
+<button>Start New Word</button>
+</div>
+
+<br>
+<p>Guess the word or phase below by clicking on the list of alphabets until you find it.  If not, you will be hanged!!!</p> 
+
+<div class="row">
+<label id="hintLabel" class="col 1-12"> Hint:</label> <span class="hint col 11-12">hint</span>
+</div>
+
+<div class="row">
+<label id="answerDescription" class="col 2-12">The word was:</label> <span id ="answer" class="10-12"></span>
+</div>
+
+<div>
+  <div class="alphabets">A</div> 
+  <div class="alphabets">B</div>
+  <div class="alphabets">C</div> 
+  <div class="alphabets">D</div>
+  <div class="alphabets">E</div> 
+  <div class="alphabets">F</div>
+  <div class="alphabets">G</div> 
+  <div class="alphabets">H</div>
+  <div class="alphabets">I</div> 
+  <div class="alphabets">J</div>
+  <div class="alphabets">K</div> 
+  <div class="alphabets">L</div>
+  <div class="alphabets">M</div> 
+  <div class="alphabets">N</div>
+  <div class="alphabets">O</div> 
+  <div class="alphabets">P</div>
+  <div class="alphabets">Q</div> 
+  <div class="alphabets">R</div>
+  <div class="alphabets">S</div> 
+  <div class="alphabets">T</div>
+  <div class="alphabets">U</div> 
+  <div class="alphabets">V</div>
+  <div class="alphabets">W</div> 
+  <div class="alphabets">X</div>
+  <div class="alphabets">Y</div> 
+  <div class="alphabets">Z</div>
+  <div class="alphabets">-</div>
+</div>
+
+
+<div class="hangman">
+  <div class="standingstick">standingstick</div>
+  <div class="crossstick">crossstick</div>
+  <div class="topstick">topstick</div>
+  <div class="head"> head </div>
+  <div class="neck"> neck </div>
+  <div class="shoulder"> shoulder </div>
+  <div class="arms1"> arms1 </div>
+  <div class="torso"> torso </div>
+  <div class="arms2"> arms2 </div>
+  <div class="leg1"> leg1 </div>
+  <div class="leg2"> leg2 </div>
+</div>
+
+
+<div>
+<h4 class="newWord"></h4>
+</div>
+
+<div>
+<h4 class="secondWord"></h4>
+</div>
+
+<h3 class="placeMarkers"></h3>
+<h6 class="letterCount"></h6>
+
+
+<!-- Contents End Here  -->
+
+  <!-- Modal Win Trigger -->
+
+  <div id="modalWon" class="modal">
+    
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="modal-content">
+          <p> Congratulations!</p><p>You Got It!</p>
+          <div class="player"></div>
+
+        </div>
+      </div>
+    </div>
+
+      <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat done">OK</a>
+      </div>
+
+  </div>
+
+
+  <!-- End of Modal Win -->
+   <!-- Modal Lose Trigger -->
+
+  <div id="modalLost" class="modal">
+    
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="modal-content">
+          <p>Sorry, You Lost!!!!</p>
+
+        </div>
+      </div>
+    </div>
+
+      <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat done">OK</a>
+      </div>
+
+  </div>
+
+
+  <!-- End of Modal Lose -->
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

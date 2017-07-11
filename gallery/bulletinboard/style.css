@@ -1,0 +1,97 @@
+body,
+html,
+div.board,
+div#react-container{
+	height: 100%;
+	overflow: hidden;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.note {
+	height: 150px;
+	width: 150px;
+	background-color: yellow;
+	box-shadow: 5px 5px 15px 0px rgba(0,0,0, .2);
+	font-family: Zapfino;
+	margin: 10px;
+	position: absolute;
+	cursor: grab;
+	overflow: hidden;
+}
+
+.note > textarea {
+	height: 75%;
+}
+
+.note:hover > #editBtn, .note:hover > #deleteBtn, .note:hover > #saveBtn{
+	opacity: 1;
+}
+
+button {
+	position: relative;
+	top: 75%;
+	right: 2%;
+	float: right;
+}
+
+#deleteBtn {
+	position: absolute;
+	top: 80%;
+	float: right;
+	opacity: 0;
+}
+
+#editBtn{
+	position: absolute;
+	top: 80%;
+	right: 60%;
+	float:right;
+	opacity: 0;
+}
+
+#saveBtn {
+	position: absolute;
+	top: 80%;
+	left: 2%;
+	float: left;
+	opacity: 0;
+}
+
+#addBtn{
+	position: absolute;
+	width: 8%;
+	height: 10%;
+	top: 3%;
+	right: 5%;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 0;
+}
+
+#addBtn:hover{
+	cursor: grab;
+	background-color: red;
+}
+
+#addsign{
+	margin-top: 0;
+	word-spacing: 0;
+	letter-spacing: 0;
+	font-size: 400%;
+}
+
+
+#board {
+	height: 100%;
+	width: 100%;
+	background-color: brown;
+	background: #eab92d;
+	z-index: 1;
+	box-shadow: 4px 4px 2px 4px #eee;
+	font-family: Zapfino;
+}

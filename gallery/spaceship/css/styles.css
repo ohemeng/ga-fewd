@@ -1,0 +1,46 @@
+body{
+	background: url("../img/stars.jpg");
+}
+
+.spaceship{
+	display: inline-block;
+	height:100px;
+	width: 200px;
+	transition: transform 0.2s, top 0.2s, left 0.2s;
+	position: relative;
+}
+
+.crushes{
+	float: right;
+	color: white;
+	margin-right: 0px;
+}
+
+ @keyframes mymove {
+   0% {top: 8px;}
+   20% {top: 200px;}
+   40% {left: 250px; background: red;}
+   60% {top: 300px; background: radial-gradient(red,yellow);}
+   80% {left: -100px; background: yellow;}
+   100% {left: -30px;}
+}
+
+.redBox {
+	height: 100px;
+	width: 100px;
+	background: url("../img/redsat.png");
+	background-size: cover;
+	position: relative;
+	top: 100px;
+	left: 600px;
+}
+
+.greenBox{
+	height: 100px;
+	width: 100px;
+	background: url("../img/greensat.png");
+	background-size: cover;
+	position: relative;
+	top: 300px;
+	left: 300px;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	DevTechStar | Websites, Mobile Apps, Development Training | Gallery
+	</title>
+	<link rel="icon" type="image/png" href="img/logodts_3.png">
+	<link href='https://fonts.googleapis.com/css?family=Oswald:700,400|Merriweather:700,700italic|Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/simple-grid.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/myscript.js"></script>
+</head>
+<body>
+	<div class="grid">
+		<header class="grid col-1-1">
+		<div class="grid">
+		<div class = "heading col-4-12">
+
+			<div id="logo">
+		<!--	<img src="img/logodts_long1.png"> -->
+			</div>
+		
+
+			<!-- <h1>DevTech<span class="star">Star</span></h1>
+			<div id="fafabars">
+				<i class="fa fa-bars" col-1-6></i>
+			</div>
+		</div>
+		-->
+
+
+		<div class="container" onclick="myFunction(this)">
+			  <div class="bar1"></div>
+			  <div class="bar2"></div>
+			  <div class="bar3"></div>
+		</div>
+
+		</div>
+		
+			<a href="#" class="headingnav col-2-12">About Us</a>
+			<a href="#" class="headingnav col-2-12">Training</a>
+			<a href="#" class="headingnav col-2-12">Website Design</a>
+			<a href="#" class="headingnav col-2-12">Mobile Apps</a>
+			<a href="#" class="headingnav col-2-12">Contact Us</a>
+
+		</div>
+
+
+		</header>
+	</div>
+
+	<div class="grid">
+	<div class="mobileMenu col-1-1">
+		<ul>
+			<li id="mobileMenu1"><a>Website Development Training</a></li>
+			<li id="mobileMenu2"><a>Mobile Development Training</a></li>
+			<li id="mobileMenu3"><a>Request to create a website</a></li>
+			<li id="mobileMenu4"><a>Request to create a mobile app</a></li>
+		</ul>
+	</div>
+	</div>
+
+		<div class="grid">
+			<div class="because col-1-1">
+				<p>We get you where you want to be; the <span id="best">best</span> in the <span id="world"> World</span> for our services and products.</p>
+			</div>
+		</div>
+	
+		<div class="grid">
+		<div class="backgroundImage col-1-1">
+			<aside>
+				<div class="box">
+				<h2>Get to the Top!</h2>
+				<p>Do you want to learn to be an app developer(web or mobile)?  Do you want to have a great website or mobile app? but need help making it a reality? We're here to help. DevTechStar is the best palce for to be an app developer and get your web or mobile app.</p>
+				</div>
+			</aside>
+		</div>
+		</div>
+
+
+
+			<div class="content grid">
+				<article class="training col-1-3">
+					<h2>Want Web or Mobile Developer Training?</h2>
+					<p>Do you want to be a web or mobile app developer? We can train you in the latest technology to be the developer you want to be!</p>
+
+					<div class="myBtn">
+						<button class="signup" id="submittraining">REQUEST FOR INFO</button>
+					</div> 
+				</article>
+
+			
+				<article class="website col-1-3">
+					<h2>Want a first class Website created?</h2>
+					<p>Looking to create a business, personal, or an organizational website? We can create a first class website for you within hours! </p>
+
+					<div class="myBtn">
+						<button class="startyour1" id="submitwebsite">SUBMIT A REQUEST</button>
+					</div>
+				</article>
+
+					<article class="mobile col-1-3">
+					<h2>Want a first class Mobile App?</h2>
+					<p>Need to create a mobile app for a business or organization?  We can create your app for you in a shorter time than you think!</p>
+
+					<div class="myBtn">
+						<button class="startyour2" id="submitmobile">SUBMIT A REQUEST</button>
+					</div> 
+
+				</article>
+			</div>		
+	
+
+		<footer>
+		<p>	&copy 2017 DevTechStar LLC. Suite 203, 8998 Route 18, Old Bridge, NJ 08857. Tel: 732-939-8433</p>
+		</footer>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+
+    <span class="close">&times;</span>
+
+    <h1>Request for Information</h1>
+    <h3>Please fill the form below to receive more information via email</h3>
+
+    <form class="trainingform"  name"input" action="./scripts/send_message.php" method="post">
+    	<label>First Name</label><input type="text" name="firstname" placeholder="Enter first name"><br>
+    	<label>Last Name</label><input type="text" name="lastname" placeholder="Enter last name"><br>
+    	<label>Email Address</label><input type="text" name="email" placeholder="Enter email address"><br>
+    	<label>Confirm Email</label><input type="text" name="emailconfirm" placeholder="Re-enter email address"><br>
+    	<label>Message:</label><textarea cols="50" rows="10" name="message"></textarea>
+    	<br>
+    	<button type="Submit"> Submit </button>
+    	<br>
+    	<br>
+    </form>
+
+  </div>
+
+</div>
+<script>
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+</script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/myscript.js"></script>
+</body>
+</html>

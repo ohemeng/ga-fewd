@@ -1,0 +1,257 @@
+body{
+	width: 80%;
+	margin: 0 auto;
+	color: #00ff44;
+	background-color: #aa2233;
+	font-size: 2em;
+}
+
+#heading{
+	text-align: center;
+}
+
+#medterm, #urinary{
+	left: 20%;
+	opacity: 1;
+}
+
+label{
+	left: 10%;
+}
+
+
+label{
+	font-size: 16px;
+}
+
+.alphabets{
+	font-size: 20px;
+	font-weight: bolder;
+	margin: 0 auto;
+	display: inline-block;
+	margin-bottom: 1%;
+}
+
+.alphabets:hover{
+	cursor: copy;
+}
+
+#hintLabel{
+	float: left;
+}
+
+.hint{
+	background-color: black;
+	float:left;
+	margin-left: 1%;
+	margin-bottom: 1%;
+	
+
+}
+
+.hint:hover{
+	cursor: help;
+}
+
+
+
+.hangman{
+	position: relative;
+	height: 550px;
+	width: 500px;
+	left: 30%;
+}
+
+.neck, .shoulder, .arms1, .arms2, .torso, .leg1, .leg2, .topstick, .crossstick, .standingstick{
+	border: 1px solid black;
+	position: absolute;
+	background-color: black;
+	color: rgba(0, 0, 0, 0);
+}
+
+.standingstick{
+	left: 20%;
+	width: 1%;
+	height: 95%;
+	top: 3%;
+}
+
+.crossstick{
+	left: 20%;
+	width: 30%;
+	height: 1%;
+	top: 2%;
+}
+
+.topstick{
+	width: 1%;
+	height: 16%;
+	left: 49%;
+	top: 2%;
+	margin-top: 0px;
+	z-index: 2;
+}
+
+.head{
+	position: absolute;
+	width: 17%;
+	height: 17%;
+	top: 15%;
+	left: 41%;
+	background-image: url("../img/head2.png");
+	background-size: 100%, 100%;
+	background-repeat: no-repeat;
+	color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+	transition: transform 1s;
+}
+
+.neck{
+	height: 5%;
+	width: 2%;
+	left: 49%;
+	top: 30%;
+}
+
+.arms1{
+	width: 5%;
+	height: 29%;
+	top: 35%;
+	left: 30%;
+}
+
+.arms2{
+	width: 5%;
+	height: 29%;
+	top: 35%;
+	left: 65%;
+}
+
+.shoulder{
+	height: 4%;
+	width: 40%;
+	left: 30%;
+	top: 35%;
+}
+
+.torso{
+	height: 25%;
+	width: 20%;
+	top: 39%;
+	left: 40%;
+}
+
+.leg1{
+	left: 30%;
+	height: 35%;
+	width: 10%;
+	left: 35.5%;
+	top: 63%;
+	margin: 0 2px;
+}
+
+.leg2{
+	left: 30%;
+	height: 35%;
+	width: 10%;
+	left: 52%;
+	top: 63%;
+	margin: 0 2px;
+}
+
+.newWord{
+	position: absolute;
+	margin: 0 30%;
+	color: black;
+}
+
+.transparent{
+	color: rgba(0, 0, 0, 0);
+}
+
+.myWordClass{
+	display: inline-block;
+	color: black;
+}
+.theBlackClass{
+	color: black;
+}
+
+.secondWord{
+	display: inline-block;
+	letter-spacing: 2px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.inlineClass{
+	display: inline-block;
+}
+
+.modal{
+	border-radius: 10px;
+	width: 50%;
+	background-color: #00ff44;
+	color: black;
+	text-align: center;
+}
+
+button{
+	background-color: black;
+	margin-bottom: 5%;
+	position: absolute;
+}
+
+h3, .placeMarkers{
+	letter-spacing: 2px;
+	height: 2px;
+	margin-bottom: 5%;
+	margin-top: 0px;
+	line-height: 1%;
+
+*/
+}
+
+.letterCount {
+	position: relative;
+	left: 10%;
+	margin-top: 0px;
+}
+
+#answerDescription{
+	height: 14px;
+	visibility: hidden;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#answer{
+	color: white;
+	visibility: hidden;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+/* --------Mobile Format ---------- */
+
+@media screen and (max-width: 1100px) {
+    body{ 
+       font-size: 2.5em;
+    }
+
+    h5 {
+    	font-size: 2em;
+    }
+
+  	#hintLabel {
+ 			font-size: 1.2em;
+    }
+
+    .alphabets, .letterCount, .secondWord, #answerDescription{
+    	font-size: 2em;
+    }
+
+    #answerDescription{
+    	font-size: 1.2em;
+    }
+}
