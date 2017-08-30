@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tic Tac Toe Pro</title>
+  <link rel="icon" type="image/png" href="../../img/logodts_3.png">
+	    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+      <!--Let browser know website is optimized for mobile-->
+			<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <h3>Tic Tac Toe Pro</h3>
+
+			<div class="a1 piece"></div><div  class="b1 piece">	</div><div class="c1 piece"></div>
+			<div class="a2 piece"></div><div  class="b2 piece">	</div><div  class="c2 piece"></div>
+			<div  class="a3 piece"></div><div  class="b3 piece">	</div><div  class="c3 piece"></div>
+      <div>
+      <p class="score">Player X Score: <label class="playerXScore">0</label></p>
+      <p class="score">Player O Score: <label class="playerOScore">0</label></p>
+      </div>
+			<div><button class="playAgain">Restart Game</button></div>
+
+
+	<!-- Modal Win Trigger -->
+
+  <div id="modalWon" class="modal">
+    
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="modal-content">
+          <p> We have a winner!</p><br/>
+          <p></p>
+          <div class="player"></div>
+
+        </div>
+      </div>
+    </div>
+
+	    <div class="modal-footer">
+	      <a class="modal-action modal-close waves-effect waves-green btn-flat done">Done</a>
+	    </div>
+
+  </div>
+
+
+  <!-- End of Modal Win -->
+
+    <!-- Modal Tie Trigger -->
+
+  <div id="modalTie" class="modal">
+    
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="modal-content">
+          <p> It is a Tie!!!!</p>
+
+        </div>
+      </div>
+    </div>
+
+      <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat done">Done</a>
+      </div>
+
+  </div>
+
+
+  <!-- End of Modal Tie -->
+
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+			<script type="text/javascript" src="js/app.js"></script>
+  </div>
+</body>
+</html>

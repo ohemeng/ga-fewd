@@ -1,0 +1,288 @@
+h1{
+	width: 50vw;
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 1%;
+	z-index: 1;
+	background-color: yellow;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px black;
+}
+
+.arrow{
+	position: relative;
+	width:10vw;
+	height: 10vw;
+	background-image: url("../img/arrow.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	transform: rotate(180deg);
+	padding: 0;
+	z-index: 0;
+}
+
+.wheel{
+	position: relative;
+	width: 70vw;
+	height: 70vw;
+	background-image: url("../img/wheel2.png");
+	background-size: cover;
+	margin: 0 auto;
+	margin-bottom: 5%;
+	z-index: 0;
+}
+
+.spinBtn{
+	position: relative;	
+	display: block;
+	width: 20vw;
+	padding: 20px;
+	margin: 0 auto;
+	z-index: 2;
+	font-size: 5vw;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px black;
+}
+
+.spinBtn:hover{
+	background-color: #DAA520;
+}
+
+/*.score1{
+	position: relative;
+	top: 32vw;
+	width: 20vw;
+	height: 5vw;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-color: white;
+	border-radius: 10px;
+	text-align: center;
+	padding-top: 2px;
+	font-size: 20px;
+	font-weight: bolder;
+	z-index: 2;
+}*/
+.score2{
+	position: relative;
+	width: 20vw;
+	height: 7vw;
+	border: 1px solid black;
+	margin: 0 auto;
+	background-color: white;
+	border-radius: 10px;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 5px;
+	font-size: 4vw;
+	font-weight: bolder;
+	z-index: 2;
+	background-color: lightgreen;
+	box-shadow: 5px 5px 5px black;
+}
+
+.modal{
+	border-radius: 20px;
+/*width: 50%;
+	background-color: #00ff44;
+	color: black;
+	text-align: center;
+	z-index: 3;*/
+}
+
+@keyframes spin15{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(375deg);
+		}
+}
+
+@keyframes spin30	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(390deg);
+		}
+}
+
+@keyframes spin45	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(405deg);
+		}
+}
+@keyframes spin60	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(420deg);
+		}
+}
+@keyframes spin75	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(435deg);
+		}
+}
+@keyframes spin90	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(450deg);
+		}
+}
+@keyframes spin105	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(465deg);
+		}
+}
+@keyframes spin120	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(480deg);
+		}
+}
+@keyframes spin135	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(495deg);
+		}
+}
+@keyframes spin150	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(510deg);
+		}
+}
+@keyframes spin165	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(525deg);
+		}
+}
+@keyframes spin180	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(540deg);
+		}
+}
+@keyframes spin195	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(555deg);
+		}
+}
+@keyframes spin210	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(570deg);
+		}
+}
+@keyframes spin225	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(585deg);
+		}
+}
+@keyframes spin240	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(600deg);
+		}
+}
+@keyframes spin255	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(615deg);
+		}
+}
+@keyframes spin270	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(630deg);
+		}
+}
+@keyframes spin285	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(645deg);
+		}
+}
+@keyframes spin300	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(660deg);
+		}
+}
+@keyframes spin315	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(675deg);
+		}
+}
+@keyframes spin330	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(690deg);
+		}
+}
+@keyframes spin345	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(705deg);
+		}
+}
+@keyframes spin360	{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(720deg);
+		}
+}

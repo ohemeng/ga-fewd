@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kPOP-it</title>
+  <link rel="icon" type="image/png" href="../../img/logodts_3.png">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css" />
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/kpop-it.css">
+</head>
+<body>
+
+<div class="container">
+	<h1 class="text-center header">kPOP-it</h1>
+	<div class="clock"><span class="clocking">300</span><span> </span><span>secs left</span></div>
+
+  <div class="sun"></div>
+
+<div class="blueballoon blueplace blue"></div>
+<div class="redballoon red"></div>
+
+<div class="total"><span class="totalcount">0</span></div>
+<div class="bronze"></div><div class="silver"></div><div class="gold"></div>
+
+<div class="modal fade " tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg bg-info">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center">It is time!!!</h4>
+      </div>
+      <div class="modal-body">
+        <h4 class="text-center">Game over!&hellip;</h4>
+        <h2 class="bg-success text-center">You popped: <span class="totalcount">0 </span><span> </span>balloons</h2>
+      </div>
+      <div class="modal-footer">
+      <div class="bronzeM"></div><div class="silverM"></div><div class="goldM"></div>
+        <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+</div> <!-- end of container -->
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
+<script src="js/DragDropTouch.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script src="js/kpop-it.js" type="text/javascript"></script>
+</body>
+</html>

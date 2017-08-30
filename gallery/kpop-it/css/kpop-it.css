@@ -1,0 +1,243 @@
+body{
+
+}
+.container{
+	width: 100vw;
+	height: 100vw;
+	background: linear-gradient(rgb(135, 206, 255) 5%, white 95%);
+	background-size: cover;
+}
+h1{
+	width: 30vw;	
+	border: 1px solid black;
+	margin: 0 auto;
+	border-radius: 10px;
+	background: linear-gradient(white, red);
+	z-index: 2;
+}
+
+.clock{
+	width: 30vw;
+	height: 5vw;
+	background: linear-gradient(white 5%, green 95%);
+	text-align: center;
+	font-weight: bolder;
+	color: white;
+	font-size: 4vw;
+	margin: 0 auto;
+	border-radius: 10px;
+	z-index: 2;
+}
+
+.sun{
+	position: absolute;
+	left: 85vw;
+	top: 10vw;
+	display: inline-block;
+	width: 5vw;
+	height: 5vw;
+	background-color: yellow;
+	box-shadow: 0px 0px 20px 20px yellow;
+	border-radius: 100%;
+	animation: orbit 300s;
+	z-index: 1;
+}
+
+.blueballoon{
+	position: absolute;
+	width: 20vw;
+	height: 20vw;
+	background-image: url("../img/blue_balloon.png");
+	left: 20vw;
+	top: -60vw;
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 3;
+}
+
+/*.blueplace{
+	position: absolute;
+	width: 20vw;
+	height: 20vw;
+	background-image: url("../img/blue_balloon.png");
+	left: 20vw;
+	top: -100vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+*/
+.redballoon{
+	position: absolute;
+	width: 20vw;
+	height: 30vw;
+	background-image: url("../img/red_balloon.png");
+	left: 40vw;
+	top: -60vw;
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 3;
+}
+
+.total{
+	position: absolute;
+	top: 30vw;
+	width: 20vw;
+	height: 5vw;
+	background: linear-gradient(white 5%, purple 95%);
+	text-align: center;
+	font-weight: bolder;
+	color: white;
+	font-size: 4vw;
+	border-radius: 10px;
+	animation: rotateTotal 1s;
+}
+
+@keyframes fallanimationup{
+	0%{
+		top: -2vw;
+	}
+	100%{
+		top: 150vw;
+	}
+}
+
+@keyframes fallanimationdown{
+	0%{
+		top: 150vw;
+	}
+	100%{
+		top: -2vw;
+	}
+}
+
+.redexplode{
+	position: absolute;
+	width: 20vw;
+	height: 30vw;
+	background-color: red;
+/*	box-shadow: 20px 20px 20px 20px red;*/
+	border-radius: 100%;
+	opacity: 0;
+}
+
+.blueexplode{
+	position: absolute;
+	width: 20vw;
+	height: 20vw;
+	background-color: blue;
+/*	box-shadow: 20px 20px 20px 20px blue;*/
+	border-radius: 100%;
+	opacity: 0;
+}
+
+.bronze, .silver, .gold{
+	position: relative;
+	display: inline-block;
+	width: 5vw;
+	height: 5vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+	top: 28vw;
+}
+
+.bronzeM, .silverM, .goldM{
+	position: relative;
+	display: inline-block;
+	width: 5vw;
+	height: 5vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+	left: -23vw;
+}
+
+.bronze, .bronzeM{
+	background-image: url("../img/bronzemedal.png");
+}
+.silver, .silverM{
+	background-image: url("../img/silvermedal.png");
+}
+.gold, .goldM{
+	background-image: url("../img/goldmedal.png");
+}
+
+
+@keyframes shrink{
+	0%{
+		width: 10%;
+		height: 10%;
+	}
+	100%{
+		width: 0%;
+		height: 0%;
+	}
+}
+
+@keyframes fly{
+	0%{
+		width: 100%;
+		height: 100%;
+	}
+	100%{
+		width: 0%;
+		height: 0%;
+		left: 100vw;
+		top: 100vw;
+	}
+}
+
+@keyframes orbit{
+	0%{
+		left: 85vw;
+		top: 10vw;
+		box-shadow: 0px 0px 20px 40px yellow;
+	}
+	50%{
+		top: 0vw;
+		left: 47vw;
+		box-shadow: 0px 0px 10px 20px orange;
+	}
+	100%{
+		left: 15vw;
+		top: 10vw;
+		background-color: orange;
+		box-shadow: 0px 0px 0px 0px brown;
+		opacity: 0.3;
+	}
+}
+
+.totalRota{
+	position: absolute;
+	top: 30vw;
+	width: 20vw;
+	height: 5vw;
+	background: linear-gradient(white 5%, purple 95%);
+	text-align: center;
+	font-weight: bolder;
+	color: white;
+	font-size: 4vw;
+	border-radius: 10px;
+	animation: rotateTotalAgain 1s;
+}
+
+@keyframes rotateTotal{
+	0%{
+		transform: rotateX(+0deg);
+	}
+	100%{
+		transform: rotateX(+360deg);
+	}
+}
+
+@keyframes rotateTotalAgain{
+	0%{
+		transform: rotateX(+360deg);
+	}
+	100%{
+		transform: rotateX(+0deg);
+	}
+}
+
+
+.modal-content{
+	background: linear-gradient(blue, yellow);
+}

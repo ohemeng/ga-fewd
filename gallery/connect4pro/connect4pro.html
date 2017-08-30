@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Connect Four Pro</title>
+  <link rel="icon" type="image/png" href="../../img/logodts_3.png">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Latest booststrap compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/connect4.css">
+</head>
+<body>
+    <h2 class="text-center">Connect Four Pro</h2>
+    
+    <div class="connect4">
+
+    <div class="container rack">
+      <div class="therow">
+       <div class="a"></div><div  class="b">  </div><div class="c"></div><div class="d"></div><div  class="e">  </div><div  class="f"></div><div  class="g"></div>
+      </div>
+
+       <div class="redpiece"></div><div class="bluepiece"></div><div class="placeholder"></div>
+    </div>
+
+   
+    <div class="container">
+
+      <div class="therow">
+			 <div class="a1 slot open"></div><div  class="b1 slot open">	</div><div class="c1 slot open"></div><div class="d1 slot open"></div><div  class="e1 slot open">  </div><div  class="f1 slot open"></div><div  class="g1 slot open"></div>
+      </div>
+
+      <div class="therow">
+        <div class="a2 slot open"></div><div  class="b2 slot open"> </div><div class="c2 slot open"></div><div class="d2 slot open"></div><div  class="e2 slot open">  </div><div  class="f2 slot open"></div><div  class="g2 slot open"></div>
+      </div>
+      <div class="therow">
+        <div class="a3 slot open"></div><div  class="b3 slot open"> </div><div class="c3 slot open"></div><div class="d3 slot open"></div><div  class="e3 slot open">  </div><div  class="f3 slot open"></div><div  class="g3 slot open"></div>
+      </div>
+      <div class="therow">
+        <div class="a4 slot open"></div><div  class="b4 slot open"> </div><div class="c4 slot open"></div><div class="d4 slot open"></div><div  class="e4 slot open">  </div><div  class="f4 slot open"></div><div  class="g4 slot open"></div>
+      </div>
+     <div class="therow">
+        <div class="a5 slot open"></div><div  class="b5 slot open"> </div><div class="c5 slot open"></div><div class="d5 slot open"></div><div  class="e5 slot open">  </div><div  class="f5 slot open"></div><div  class="g5 slot open"></div>
+      </div>
+     <div class="therow">
+        <div class="a6 slot open"></div><div  class="b6 slot open"> </div><div class="c6 slot open"></div><div class="d6 slot open"></div><div  class="e6 slot open">  </div><div  class="f6 slot open"></div><div  class="g6 slot open"></div>
+      </div>  
+    </div>
+    </div>
+    <br>
+		<div><button class="playAgain">Restart Game</button></div>
+
+
+      <!-- Modal Win Trigger -->
+
+  <div class="modal fade" id="winModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center">We have a winner!!!</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-center">The winner is: <span id="player"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+  <!-- End of Modal Win -->
+
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
+      <script src="js/DragDropTouch.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+			<script type="text/javascript" src="js/connect4.js"></script>
+</body>
+</html>

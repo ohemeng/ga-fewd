@@ -1,0 +1,123 @@
+body{
+	background-color: black;
+	position: fixed;
+}
+
+.container{
+	background: url("../img/stars.jpg");
+	position: relative;
+	width: 100vw;
+	height: 100vw;
+	background-repeat: repeat;
+}
+
+.count, .timer, .start{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	color: white;
+}
+
+.count{
+	left: 90vw;
+}
+
+.start{
+	left: 45vw;
+}
+
+.helicopter1 img{
+	position: absolute;
+	width: 15vw;
+	top: 2vw;
+	left: 1vw;
+	background-image: url("../img/helicopter1.png");
+	animation: helimove 20s infinite;
+}
+
+@keyframes helimove{
+	0% {left: 0vw;}
+	5% {top: 1vw;}
+	30% {top: 10vw;}
+	50% {top: 2vw;}
+	100% {left: 100vw;}
+}
+
+.box{
+	position: absolute;
+	left: 70vw;
+	top:  2vw;
+	width: 20vw;
+	height: 40vw;
+	padding: 0;
+}
+
+.rope img{
+	position: absolute;
+	width: 10px;
+	height: 60vw;
+	left: 10vw;
+	top: -50vw;
+}
+
+#soldier1{
+	position: absolute;
+/*	transform: rotate(-5deg);*/
+}
+
+#soldier1 img{
+		width: 60vw;
+		height: 20vw;
+}
+
+.bullet1{
+	position: absolute;
+}
+
+.bullet1 img{
+		width: 5vw;
+		height: 5vw;
+}
+
+.bulletPlaceholder{
+	width: 5vw;
+	height: 5vw;
+	background-image: url("../img/bullet1.png");
+}
+
+
+.blueBalloon{
+	position: absolute;
+	top: 100px;
+	left: 600px;
+	display: inline-block;
+}
+
+.blueBalloon img{
+	width: 20vw;
+	height: 30vw;	
+}
+
+.instructions{
+	position: relative;
+	top: -5vw;
+	left: -13vw;
+	color: white;
+	font-weight: bolder;
+	display: inline-block;
+}
+
+.redBalloon{
+	position: absolute;
+	top: 1vw;
+	left: 6vw;
+/*	border: 1px solid white;*/
+}
+
+.redBalloon img{
+	width: 15vw;
+	height: 20vw;
+}
+.modal{
+	border-radius: 20px;
+}

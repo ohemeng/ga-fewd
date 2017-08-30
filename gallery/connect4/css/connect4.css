@@ -25,7 +25,7 @@ body{
 	width: 10vw;
 	height: 9vw;
 	flex: 1;
-	border: 1px solid black;
+	border: 20px groove black;
 	border-radius: 100%;
 	margin: 1vw;
 	z-index: 0;

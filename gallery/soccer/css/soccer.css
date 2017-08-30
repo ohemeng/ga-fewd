@@ -1,0 +1,161 @@
+body{
+	background: url(../img/field.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 670px;
+}
+
+/*img{
+background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 1500px;
+	background-size: 100vw 1100px;
+}*/
+
+h1{
+	width: 30vw;	
+	border: 1px solid black;
+	margin: 0 auto;
+	border-radius: 10px;
+	background: linear-gradient(green, white);
+}
+
+.goalpost{
+	position: absolute;
+	top: 7vw;
+	left: 30vw;
+	width: 40vw;
+	height: 16vw;
+	background: url("../img/goalpost.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+	z-index: 2;
+}
+
+.keeper{
+	position: absolute;
+	width: 10vw;
+	height: 12vw;
+	top: 13vw;
+	left: 47vw;
+	background: url("../img/keeper.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 3;
+	transition: left 2s, right 2s, rotate 2s;
+}
+
+.keeper-dive{
+	position: absolute;
+	width: 10vw;
+	height: 12vw;
+/*	background: url("../img/keeper_dive.png");*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+	z-index: 3;
+	top: 13vw;
+	transition: left 2s, right 2s, rotate 2s;
+}
+
+.soccerball{
+	position: absolute;
+	top: 50vw;
+	left: 45vw;
+	width: 4vw;
+	height: 4vw;
+	background: url("../img/soccerball.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: top 2s, left 1s;
+	z-index: 4;
+}
+
+.placeball{
+	position: relative;
+	top: 30vw;
+	width: 4vw;
+	height: 4vw;
+/*	background-color: white;*/
+	margin: 0 auto;
+	border-radius: 100%;
+}
+
+.tryAgain{
+	position: absolute;
+	display: block;
+	position: absolute;
+	float: left;
+}
+
+.instructions{
+	position: relative;
+	padding: 5px;
+	border-radius: 10px;
+	border: 1px solid white;
+	color: white;
+	float: right;
+}
+
+@keyframes blink{
+	0%{
+		background: yellow;
+	}
+	100%{
+		background: red;
+	}
+}
+
+#table{
+	position: absolute;
+	top: 30%;
+	width: 10%;
+	color: white;
+	background: linear-gradient(black, yellow);
+	text-align: center;
+}
+
+.total{
+	position: absolute;
+	top: 60%;
+	width: 17%;
+	text-align: center;
+	padding: 1.5%;
+	border-radius: 10px;
+	background: linear-gradient(white 5%, purple 95%);
+	color: white;
+}
+
+.modal-content{
+	background: linear-gradient(green, yellow);
+	width: 80%;
+	margin: 0 auto;
+}
+
+.warning{
+	display: none;
+}
+
+@media (max-width: 900px){
+	.instructions{
+		display: none;
+	}
+}
+
+@media (max-width: 600px){
+	.warning{
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: red;
+		color: white;
+		z-index: 10;
+		font-size: 30px;
+		text-align: center;
+	}
+	.goalpost, .keeper, .score, .total, .table{
+		display: none;
+	}
+}
