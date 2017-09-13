@@ -140,7 +140,7 @@ h1{
 	top: 28vw;
 }
 
-.bronzeM, .silverM, .goldM{
+.bronzeM, .silverM, .goldM, .medals{
 	position: relative;
 	display: inline-block;
 	width: 5vw;
@@ -148,6 +148,12 @@ h1{
 	background-size: cover;
 	background-repeat: no-repeat;
 	left: -23vw;
+	margin-right: 3px;
+	margin-left: 5px;
+}
+
+.medals{
+	margin-bottom: 5px;
 }
 
 .bronze, .bronzeM{

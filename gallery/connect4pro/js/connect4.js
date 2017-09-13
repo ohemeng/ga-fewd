@@ -40,6 +40,15 @@ var bluecount = 0;
 var blueLeftPos;
 
 var goForward = "yes";
+var threeInArow = "no";
+var theFourth;
+var firstLetter;
+var secondNumber;
+var y = [];
+var flag1, flag2, flag3, flag4, flag5, flag6, flag7, flag8, flag9, flag10;
+var flag = [];
+var z; 
+var theIndex;
 
 $(".redpiece").css("top", $(".a").position().top)
 $(".redpiece").css("margin-top", 1 + "vw");
@@ -51,26 +60,30 @@ $(document).mousemove(function(event){
 });
 
 $(".redpiece").mousedown(function(){
-	redcount++;
-	console.log("redcount= "+ redcount);
-	console.log("bluecount= "+ bluecount);
+
+
+
 	checkposition();
+
 	var newPosition =  $("."+ nextPosition).position().top;
 	$(".redpiece").animate({top: newPosition}, "slow");
 	$(".redpiece").css("opacity", "0.6");
-	updateXForRed(nextPosition);
-	updateArray();
+				updateArray();
+			updateXForRed(nextPosition);
+
 	chkWinner(x);
+			redcount++;
 	setTimeout(passTurn, 500);
+
+//	console.log("arrayA[0] "+ arrayA[0]);
 })
+
+//	if(x.indexOf(thirdSlot) == "-1"){
 
 // Blue computer playing
 function blueplay(nextPosition){
-	if(redcount > bluecount){
+	if(redcount > bluecount && nextPosition != 1){
 		bluecount++;
-		// checkposition();
-		// canBluePlay();
-		// var newPosition=  $("."+ nextPosition).position().top;
 		var newPosition = 60;
 		// $(".bluepiece").animate({top: newPosition});
 		// $(".bluepiece").css("opacity", "0.6");
@@ -172,12 +185,14 @@ function updateArray(){
  		$(".redpiece").css("display", "none");
  		red = 0;
  		blue = 1;
- 		canBluePlay();
+ 		
+ 		// checkfor3();
  		$(".bluepiece").css("display", "inline-block");
  		$(".bluepiece").css("top", 8 + "vw");
  		$(".bluepiece").css("opacity", 1);
  		// player = "bluepiece";
- 		// canBluePlay();
+
+ 		canBluePlay();
  		return;
  	} 
  	
@@ -256,13 +271,200 @@ function updateXForBlue(i){
 
 function chkLine(a,b,c,d) {
     // Check first cell non-zero and all cells match
-   // console.log(a + ", " + b + ", " + c + ", " + d)
-    return ((a != 0) && (a == b) && (a == c) && (a == d));
+  // console.log(a + ", " + b + ", " + c + ", " + d)
+
+
+if((d == 2) && (c == 2) && (b == 2) && (a.length === 2)){
+	flag.push(a);
+	console.log(a + ", " + b + ", " + c + ", " + d);
+   	 if(a.length === 2){
+		//	threeInArow = "yes";
+			flag1 = "yes";
+
+	   	var dd = a.split("");
+
+	   	var indexBelow = parseInt(dd[1]) + 1; //
+	   	var rowBelow = dd[0]; //
+	   	var placeBelow = rowBelow + indexBelow; //
+	   	 z = y.toString(); //
+	    if (z.search(placeBelow) == "-1"){ 
+	   	threeInArow = "yes"; //
+	   		secondNumber = dd[1];
+	   		firstLetter = dd.shift();
+	   		theIndex = indexBelow;
+	   	theFourth = a;
+	   	} //
+  	}
+ }  else 
+
+	if ((a == 2) && (b == 2) && (c == 2) && (d.length === 2)){
+	console.log(a + ", " + b + ", " + c + ", " + d);
+		flag.push(d);
+   	if(d.length === 2){
+	  //	threeInArow = "yes";
+	  	flag2 = "yes";
+	   	var dd = d.split("");
+
+	   	var indexBelow = parseInt(dd[1]) + 1; //
+	   	var rowBelow = dd[0]; //
+	   	var placeBelow = rowBelow + indexBelow; //
+	   	console.log("placeBelow "+ placeBelow);
+	   	 z = y.toString(); //
+	   	if (z.search(placeBelow) == "-1"){ 
+	   	threeInArow = "yes"; //
+	   		secondNumber = dd[1];
+	   		firstLetter = dd.shift();
+	   		theIndex = indexBelow;
+	   			   	theFourth = d;
+	   	 } //
+	   }
+ } else 
+
+	if ((a == 2) && (c == 2) && (d == 2) && (b.length === 2)){
+console.log(a + ", " + b + ", " + c + ", " + d);
+	flag.push(b);
+   	if(b.length === 2){
+		//	threeInArow = "yes";
+			flag3 = "yes";
+
+	   	var dd = b.split("");
+
+	   	var indexBelow = parseInt(dd[1]) + 1; //
+	   	var rowBelow = dd[0]; //
+	   	var placeBelow = rowBelow + indexBelow; //
+	   	 z = y.toString(); //
+	   	if (z.search(placeBelow) == "-1"){
+	   		threeInArow = "yes"; //
+	   		secondNumber = dd[1];
+	   		firstLetter = dd.shift();
+	   		theIndex = indexBelow;
+	   			   	theFourth = b;
+	   	 } //
+	   }
+ } // else 
+
+	if((a == 2) && (b == 2) && (d == 2) && (c.length === 2)){
+console.log(a + ", " + b + ", " + c + ", " + d);
+	flag.push(c);
+   	if(c.length === 2){
+	 	//	threeInArow = "yes";
+	 		flag4 = "yes";
+
+	   	var dd = c.split("");
+
+	   	var indexBelow = parseInt(dd[1]) + 1; //
+	   	var rowBelow = dd[0]; //
+	   	var placeBelow = rowBelow + indexBelow; //
+	   	 z = y.toString(); //
+	  	if (z.search(placeBelow) == "-1"){ 
+		 threeInArow = "yes"; //
+	   		secondNumber = dd[1];
+	   		firstLetter = dd.shift();
+	   		theIndex = indexBelow;
+	   			   	theFourth = c;
+	   	 } //
+	   }
+   } else 
+
+	if ((a == 1) && (b == 1) && (c == 1) && (d.length === 2)){
+console.log(a + ", " + b + ", " + c + ", " + d);
+		flag.push(d);
+   	if(d.length === 2){
+	 	//	threeInArow = "yes";
+	 		flag5 = "yes";
+
+	   	var dd = d.split("");
+
+	  	  var indexBelow = parseInt(dd[1]) + 1; //
+	    	var rowBelow = dd[0]; //
+	    	var placeBelow = rowBelow + indexBelow; //
+	    	 z = y.toString(); //
+	    	if (z.search(placeBelow) == "-1"){
+	 threeInArow = "yes"; //
+	   		secondNumber = dd[1];
+	   		firstLetter = dd.shift();
+	   		theIndex = indexBelow;
+	   			   	theFourth = d;
+	   } //
+   } 
+  } else 
+
+	if((d == 1) && (c == 1) && (b == 1) && (a.length === 2)){
+console.log(a + ", " + b + ", " + c + ", " + d);
+	flag.push(a);
+   	 if(a.length === 2){
+		 //	threeInArow = "yes";
+		 	flag6 = "yes";
+
+	   	var dd = a.split("");
+
+	   	var indexBelow = parseInt(dd[1]) + 1; //
+	   	var rowBelow = dd[0]; //
+	   	var placeBelow = rowBelow + indexBelow; //
+	   	 z = y.toString(); //
+	   	if (z.search(placeBelow) == "-1"){
+	threeInArow = "yes"; //
+	   		secondNumber = dd[1];
+	   		firstLetter = dd.shift();
+	   		theIndex = indexBelow;
+	   			   	theFourth = a;
+	   	 } //
+  	}
+ } else 
+
+	if ((a == 1) && (c == 1) && (d == 1) && (b.length === 2)){
+console.log(a + ", " + b + ", " + c + ", " + d);
+	flag.push(b);
+   	if(b.length === 2){
+	  //	threeInArow = "yes";
+	  	flag7 = "yes";
+
+	   	var dd = b.split("");
+
+	   	var indexBelow = parseInt(dd[1]) + 1; //
+	   	var rowBelow = dd[0]; //
+	   	var placeBelow = rowBelow + indexBelow; //
+	   	 z = y.toString(); //
+	   	console.log("Flag "+ z.search(placeBelow));
+	   	if (z.search(placeBelow) == "-1"){
+	threeInArow = "yes"; //
+	   		secondNumber = dd[1];
+	   		firstLetter = dd.shift();
+	   		theIndex = indexBelow;
+	   			   	theFourth = b;
+	 		 } //
+	   }
+ } else 
+
+	if ((a == 1) && (b == 1) && (d == 1) && (c.length === 2)){
+console.log(a + ", " + b + ", " + c + ", " + d);
+	flag.push(c);
+   	if(c.length === 2){
+	  //	threeInArow = "yes";
+	  	flag8 = "yes";
+
+	   	var dd = c.split("");
+
+	   	var indexBelow = parseInt(dd[1]) + 1; //
+	   	var rowBelow = dd[0]; //
+	   	var placeBelow = rowBelow + indexBelow; //
+	   			z = y.toString(); //
+	   	if (z.search(placeBelow) == "-1"){ 
+	threeInArow = "yes"; //
+	   		secondNumber = dd[1];
+	   		firstLetter = dd.shift();
+	   		theIndex = indexBelow;
+	   			   	theFourth = c;
+	   	 } //
+	   }
+	} 
+    return ((a != 0) && (a == b) && (a == c) && (a == d))
 }
 
 
 function chkWinner(bd) {
-	console.log("I'm checking for winner "+ bd);
+	// console.log("I'm checking for winner "+ bd);
+	 y = bd;
     // Check down/UP
     for (r = 0; r < 7; r++) {
         for (c = 0; c < 3; c++) {
@@ -347,11 +549,83 @@ function chkWinner(bd) {
     // return 0;
 }
 
-function canBluePlay(){
-	if(goForward === "yes"){;
+function canBluePlay(z){
+	if(goForward === "yes"){
 		var randNum = Math.floor(Math.random()*7 + 1);
-		console.log("randNum "+ randNum);
-		if (randNum === 1 && arrayA.length != 0){
+	//	console.log("randNum "+ randNum);
+
+				console.log("flag array "+flag);
+
+	//	var slotBelow = parseInt(secondNumber);
+
+	//	theIndex = slotBelow + 1;
+	 z = y.toString(); //
+	//	var theBelowSlot = z.search(firstLetter + theIndex);
+		console.log(z);
+		console.log("3InRow "+threeInArow);
+		console.log("Last Red "+nextPosition);
+		console.log("below# "+firstLetter + theIndex);
+	//	console.log("z found "+ z.search(firstLetter + theIndex));
+	//	console.log(("readyToGo "+ (threeInArow != "no" && nextPosition != 0 && z.search(firstLetter + theIndex) == "-1")));
+// if(threeInArow == "yes"){
+		if (threeInArow == "yes" && nextPosition != 0 && (z.search(firstLetter + theIndex) == "-1")){
+
+			flag = [];
+// if(z.search(firstLetter + theIndex) == "-1"){
+
+
+			// aPosition = arrayA[0];
+			nextPosition = theFourth;
+			blueLeftPos = "."+firstLetter;
+			var theArray;
+
+			switch(firstLetter){
+				case "a":
+					theArray = arrayA;
+					break;
+				case "b":
+					theArray = arrayB;
+					break;
+				case "c":
+					theArray = arrayC;
+					break;
+				case "d":
+					theArray = arrayD;
+					break;
+				case "e":
+					theArray = arrayE;
+					break;
+				case "f":
+					theArray = arrayF;
+					break;
+				case "g":
+					theArray = arrayG;
+					break;
+				default:
+					break;
+			}
+			// theIndex = slotBelow + 1;
+			// var thirdSlot = +firstLetter + theIndex;
+			// //console.log("theIndex "+theIndex);
+
+	
+			// console.log(firstLetter + theIndex)
+			// console.log("the 3rd slot "+ firstLetter + theIndex);
+			// console.log("the 4th slot "+ firstLetter + slotBelow);
+			// console.log("Index of 3rd slot exist? "+ z.search(firstLetter + theIndex));
+			// console.log("Index of 4th slot exist? "+ z.search(firstLetter + slotBelow));
+
+
+					
+				//	}
+			if (theArray.length >=1 && z.search(nextPosition) != "-1"){
+					theArray.shift();
+		}
+			
+			
+			threeInArow = "no";
+
+		}else if(randNum === 1 && arrayA.length != 0){
 			aPosition = arrayA[0];
 			nextPosition = aPosition;
 			blueLeftPos = ".a";
@@ -403,14 +677,24 @@ function canBluePlay(){
 		} else{
 			canBluePlay();
 		}
-	// }
+
 
 	var leftPos =  $(blueLeftPos).position().left;
-	console.log("LeftPos "+ leftPos);
+	// console.log("LeftPos "+ leftPos);
 	$(".bluepiece").css("left", leftPos);
 	$(".bluepiece").css("margin-top", 1 + "vw");
 	player = "bluepiece";
-	blueplay(nextPosition);
+
+
+		console.log("last Blue "+ nextPosition);
+		console.log("Search Value " + z.search(nextPosition));
+		if(z.search(nextPosition) != "-1")		{
+			blueplay(nextPosition);
+		} else {
+			canBluePlay();
+		}
+
 	}
 }
+
 

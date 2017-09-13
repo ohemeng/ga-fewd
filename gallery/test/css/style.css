@@ -1,0 +1,618 @@
+/*
+// FONT FAMILY HELPERS :)
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Merriweather', serif;
+// font-family: 'Source Sans Pro', sans-serif;
+*/
+
+* {
+	font-size: 20px;
+}
+
+body{
+	width: 90%;
+	margin: 0 auto;
+	font-family: "Source Sans Pro";
+}
+
+header {
+	background-color: black;
+	color: white;
+	width: 100%;
+	height: 80px;
+	border-bottom: 5px solid #00FF42;
+}
+
+.heading{
+	width: 30%;
+	padding-top: 15px;
+}
+h3{
+	color: black;
+}
+
+
+.star{
+	color: #ffffff;
+	font-size: 1.6rem;
+	}
+
+
+div#logo{
+	width: 250px;
+	height: 60px;
+	padding-top: 0px;
+	margin-top: -10px;
+	margin-bottom: 20px;
+	margin-left: -10px;
+	background-image: url("../img/logodts_long1080_2.png");
+	background-position: left;
+	background-size:cover;
+	display: inline-block;
+}
+
+.headingnav{
+	margin-right: 0px;
+	margin-top: 20px;
+	font-family: "Oswald";
+	font-size: 2rem;
+	padding: 0;
+	width: 14%;
+}
+
+header a, a:visited{
+	width: 12%;
+	font-size: 1.2rem;
+	color: white;
+	margin-top: 2%;
+	margin-right: auto;
+	padding-right: 0px;
+	text-align: center;
+	text-decoration: none;
+}
+
+a:hover, a:active{
+	background-color: #00FF42;
+	height: 100%;
+	text-decoration: none;
+	color: black;
+}
+
+#fafabars{
+	display: none;
+}
+
+.mobileMenu{
+	display: none;
+}
+
+.because{
+	text-align: center;
+	font-style: italic;
+	background-color: #C6C6C6;
+	height: 40px;
+	width: 100%;
+	padding-top: 1%;
+	padding-right: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: "Merriweather", serif;
+}
+
+#best{
+	color: #FF0000;
+}
+
+#world{
+border-bottom: 5px solid yellow;
+}
+
+.backgroundImage {
+	height: 500px;
+	width: 100%;
+	background-image: url("../img/bg.jpg");
+	background-position: center;
+	background-size:cover;
+}
+
+.backgroundImage_aboutus {
+	height: 500px;
+	width: 100%;
+	background-image: url("../img/aboutus.jpg");
+	background-position: center;
+	background-size:cover;
+}
+
+.backgroundWords{
+	text-align: center;
+	padding-top: 10%;
+	margin: 0% 20%;
+	font-family: 'Orbitron', sans-serif;
+	font-weight: 700;
+	font-size: 2.0em;
+	color: white;
+}
+
+aside{
+	height: 40%;
+	width: 80%;
+	margin-left: 10%;
+	background-color: rgba(255, 255, 255, 0.7);
+
+	margin-top: 20%;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 10px 10px 5px #000000;
+}
+
+.box {
+	height: 150px;
+	width: 80%;
+	margin: 20px auto;
+	padding-top: 2px;
+}
+
+.box p{
+	margin-top: 20px;
+}
+
+.box h2{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+aside p{
+	font-size: 1.5rem;
+	margin: 20px;
+}
+
+aside h2{
+	font-family: "Oswald"
+}
+
+.createprofilebutton{
+	background-color: yellow;
+	width: 100%;
+	height: 30px;
+	padding-top: 10px;
+	margin: 0 auto;
+	text-align: center;
+	box-shadow: 2px 2px 2px #bbbbbb;
+	border-radius: 5px;
+
+}
+
+.content{
+height: auto;
+}
+
+h2, .javaPythonH1{
+	font-family: "Merriweather", serif;
+}
+
+.javaH1{
+	font-size: 2.5em;
+	text-align: center;
+	color: 	#ff0000;
+}
+.pythonH1{
+	font-size: 2.5em;
+	text-align: center;
+	color:	#ffbf00;
+}
+.javaPythonP{
+	width: 90%;
+	margin: 2% auto;
+}
+
+.syllabus{
+	width: 80%;
+	margin: 4% auto;
+	border: 5px solid yellow;
+	border-radius: 20px;
+}
+.syllabusTitle{
+	text-align: center;
+	border-bottom: 4px solid yellow;
+
+}
+
+.signUpForJavaTraining, .signUpForPythonTraining{
+	display: block;
+	margin: 0 auto;
+	padding: 2%;
+	background-color: #00FF42;
+	font-size: 1.5em;
+}
+
+.pythonImg, .javaImg{
+	width: 20%;
+	display: block;
+	margin: 0 auto;
+}
+
+.training{
+	height: auto;
+	width: 32%;
+	margin-right: 2%;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	padding: 0%;
+	border-right: 1px solid #dddddd;
+}
+
+.website{
+	height: auto;
+	width: 32%;
+	margin-right: 2%;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	padding: 0%;
+	border-right: 1px solid #dddddd;
+}
+
+.mobile{
+	height: auto;
+	width: 32%;
+	margin-top: 20px;
+}
+
+.signup{
+	margin-right: 5%;
+	width: 100%;
+	height: 50px;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	font-family: "Oswald";
+	background: #00FF42;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+.startyour1{
+	width: 95%;
+	height: 50px;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	font-family: "Oswald";
+	background: #00FF42;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 25px;
+}
+
+.startyour2{
+	width: 95%;
+	height: 50px;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	font-family: "Oswald";
+	background: #00FF42;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#tictactoe, #pizzashop, #hangman{
+	margin-left: 5%;
+	width: 90%;
+	border: 1px solid black;
+	border-radius: 10%;
+	box-shadow: 5px 5px 5px black;
+}
+
+footer{
+	margin-top: 100px;
+	margin-bottom: 20px;
+	height: 100px;
+	width: 100%;
+	background-color: black;
+	color: white;
+}
+
+footer p{
+	font-size: 1.2rem;
+	padding-top: 20px;
+	text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: -5vw;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* --------------------------------------Modal Content -----------------------------------------------*/
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-content h1,h3{
+		text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #111111;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label {
+	margin: 10px 10px 10px 10px;
+}
+
+
+.container{
+	display: none;
+	float: left;
+}
+
+/* --------------------End of modal display ------------- */
+
+
+h2{
+	text-align: center;
+}
+
+.small_img{
+	border-radius: 100%;
+	margin: 0 12%;
+
+}
+
+p.small_p{
+	margin-left: 20px;
+
+}
+
+#thanks{
+	float: right;
+}
+
+.thankyou{
+	background-color: #00FF42;
+	width: 70%;
+}
+
+.emailcheck{
+	color: red;
+}
+
+.submit{
+	border-radius: 10px;
+}
+
+.signUpForWebTraining, .signUpForMobileTraining{
+	margin: 0 25%;
+	width: 50%;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: #00FF42;
+}
+
+.closeWebTrainingModal, .closeMobileTrainingModal{
+	float: right;
+	color: #dddddd;
+}
+
+.closeWebTrainingModal:hover, .closeMobileTrainingModal:hover{
+	cursor: pointer;
+}
+
+#typeofrequest{
+	display: none;
+}
+
+.requiredField{
+	font-size: 14px;
+}
+.legend{
+	display: none;
+	margin-top: 2%;
+}
+.green, .orange, .red{
+	width: 5%;
+	height: 20px;
+	display: inline-block;
+}
+
+.green{
+	background-color: lightgreen;
+}
+
+.orange{
+	background-color: orange;
+}
+
+.red{
+	background-color: red;
+}
+
+/* ========================================Mobile display starts from here ======================== */
+
+@media only screen and (max-width: 1080px){
+	* {
+		font-size: 20px;
+	}
+
+	body {
+		background-color: #00aa42;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+header{
+	border-bottom: 5px solid yellow;
+	}
+
+.heading{
+	width: 100%;
+	padding-top: 0px;
+	padding-bottom: 40px;
+
+	}
+
+.heading h1{
+		margin: 0;
+	}
+
+	h3{
+	color: white;
+	}
+
+#fafabars{
+	padding-top: 0px;
+	display: inline-block;
+	float: right;
+	}
+
+.mobileMenu{
+	display: block;
+	position: absolute;
+	top: -250px;
+	width: 100%;
+	background-color: #000000;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 0.7rem;
+	transition: top 1s;
+	margin: 0 auto;
+	
+	}
+
+.showMobileMenu{
+	display: block;
+	position:absolute;
+	top: 90px;
+	width:92%;
+	margin: 0 auto;
+	}
+
+.mobileMenu li{
+	border-bottom: 1px solid white;
+	list-style: none;
+	margin: 0 auto;
+	}
+
+.mobileMenu a, a:hover{
+	color: white;
+	background-color: black;
+	margin: 0 auto;
+	}
+
+.mobileMenu a:hover{
+	background-color: black;
+	color: #00FF44;
+	cursor: pointer;
+	}
+
+
+.headingnav{
+	display: none;
+	}
+
+h2{
+	font-family: "Merriweather", serif;
+	font-size: 2.5rem;
+	}
+aside{
+		display: none;
+	}
+
+.because{
+	height: auto;
+	font-size: 0.5rem;
+	}
+
+.training, .mobile, .website{
+	display: block;
+	height: auto;
+	width: auto;
+	border-right: none;
+	}
+
+.signup, .startyour1, .startyour2{
+	text-align: center;
+	width: 50%;
+	margin: 0 25%;
+	}
+
+
+
+#myModal{
+	width: 110vw;
+	}
+
+.javaPythonP, .syllabus, .syllabusTitle{
+	font-family: "Merriweather", serif;
+	color: white;
+}
+
+
+
+
+
+/* ------------------------------(start) Mobile Menu bars ------------------ */
+   .container {
+   	width:40px;
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    margin-top: 5px;
+    margin-right:2%;
+		}
+
+	.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+	}
+
+/* Rotate first bar */
+	.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+	}
+
+/* Fade out the second bar */
+	.change .bar2 {
+    opacity: 0;
+	}
+
+/* Rotate last bar */
+	.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+	}
+}
+/* ------------------------(End) Mobile Menu bars----------------- */
+
+
+}

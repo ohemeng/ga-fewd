@@ -307,8 +307,8 @@ $(".modalWon").on("click", function(){
 // -------------- Adding Computer Pro moves
 
 function oplayNext2() {
-if($(".c2").hasClass("xpiece") && ($(".c3").hasClass("opiece") == false)&& ($(".c3").hasClass("xpiece") == false)){
-		$(".c3").addClass("opiece");
+if($(".c2").hasClass("xpiece") && ($(".a2").hasClass("opiece") == false)&& ($(".a2").hasClass("xpiece") == false)){
+		$(".a2").addClass("opiece");
 				//checkWin(player);
 
 				player = "playerx";
@@ -470,14 +470,17 @@ function oplayNext1(){
 		else if ($(".a3").hasClass("xpiece") && $(".c3").hasClass("xpiece")&& $(".b3").hasClass("opiece") === false){
 	$(".b3").addClass("opiece");
 	}
+			else if ($(".a3").hasClass("xpiece") && $(".c1").hasClass("xpiece")&& $(".b2").hasClass("opiece") === false){
+	$(".b2").addClass("opiece");
+	}
 		else if ($(".b1").hasClass("xpiece") && $(".b3").hasClass("xpiece")&& $(".b2").hasClass("opiece") === false && $(".b2").hasClass("xpiece") === false){
 	$(".b2").addClass("opiece");
 	}
 			else if ($(".b3").hasClass("xpiece") && $(".c3").hasClass("xpiece")&& $(".b1").hasClass("opiece") === false && $(".b1").hasClass("xpiece") === false){
 	$(".b1").addClass("opiece");
 	}
-		else if ($(".a2").hasClass("xpiece") && $(".b1").hasClass("xpiece")&& $(".c1").hasClass("opiece") === false && $(".c1").hasClass("xpiece") === false){
-	$(".c1").addClass("opiece");
+		else if ($(".a2").hasClass("xpiece") && $(".b1").hasClass("xpiece")&& $(".c3").hasClass("opiece") === false && $(".c3").hasClass("xpiece") === false){
+	$(".c3").addClass("opiece");
 	} 
 			else if ($(".a2").hasClass("xpiece") && $(".b3").hasClass("xpiece")&& $(".c2").hasClass("opiece") === false && $(".c2").hasClass("xpiece") === false){
 	$(".c2").addClass("opiece");
@@ -485,8 +488,8 @@ function oplayNext1(){
 				else if ($(".a2").hasClass("xpiece") && $(".c1").hasClass("xpiece")&& $(".b1").hasClass("opiece") === false && $(".b1").hasClass("xpiece") === false){
 	$(".b1").addClass("opiece");
 	}  
-				else if ($(".a3").hasClass("xpiece") && $(".c2").hasClass("xpiece")&& $(".b1").hasClass("opiece") === false && $(".b1").hasClass("xpiece") === false){
-	$(".b1").addClass("opiece");
+				else if ($(".a3").hasClass("xpiece") && $(".c2").hasClass("xpiece")&& $(".c1").hasClass("opiece") === false && $(".c1").hasClass("xpiece") === false){
+	$(".c1").addClass("opiece");
 	} 
 					else if ($(".a1").hasClass("xpiece") && $(".c2").hasClass("xpiece")&& $(".c1").hasClass("opiece") === false && $(".c1").hasClass("xpiece") === false){
 	$(".c1").addClass("opiece");
@@ -530,6 +533,9 @@ function oplayNext1(){
 			else if ($(".a3").hasClass("xpiece") && $(".b1").hasClass("xpiece")&& $(".b2").hasClass("xpiece") && $(".a2").hasClass("xpiece") === false && $(".a2").hasClass("opiece") === false){
 		$(".a2").addClass("opiece");
 	}
+	// 		else if ($(".b3").hasClass("xpiece") && $(".c1").hasClass("xpiece")&& $(".c2").hasClass("xpiece") && $(".a3").hasClass("xpiece") && $(".b2").hasClass("xpiece") === false && $(".b2").hasClass("opiece") === false){
+	// 	$(".b2").addClass("opiece");
+	// }
 	// else if ($(".b1").hasClass("opiece") && $(".c1").hasClass("opiece")&& $(".c3").hasClass("opiece") && $(".c2").hasClass("xpiece") === false && $(".c2").hasClass("opiece")=== false){
 	// $(".c2").addClass("opiece");
 	// }
@@ -608,6 +614,9 @@ function oplay(){
 	}
 	else if ($(".b3").hasClass("opiece") && $(".c3").hasClass("opiece")&& $(".a3").hasClass("xpiece")=== false){
 		 $(".a3").addClass("opiece") ;
+	}
+	else if ($(".b1").hasClass("opiece") && $(".c1").hasClass("opiece")&& $(".a1").hasClass("xpiece")=== false){
+		 $(".a1").addClass("opiece") ;
 	}
 	else{
 				oplayNext1();
